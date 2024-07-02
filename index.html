@@ -11,13 +11,33 @@
     <title>Full Page Layout</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
         :root {
             --text-color: #584C55;
+           
         }
 
-        .text-color {
+        .text-color-basic {
             color: var(--text-color);
         }
+
+        .chat-bubble-other{
+            width: 42px;
+            height: 42px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10000px;
+            background-color: #74205C;
+            font-size: 18px;
+            color: white;
+        }
+            
+        
 
         .tab-content {
             display: none;
@@ -56,7 +76,7 @@
                 <h3 class="">RECENTLY</h3>
                 <h3 class="text-[#FE3B99] ">SEE MORE</h3>
             </div>
-            <ul class="mb-10 font-medium text-color tracking-tight">
+            <ul class="mb-10 font-medium text-color-basic tracking-tight">
                 <li class="mb-2 px-2 py-1"><a href="#">Text to Image Diffusion Model</a></li>
                 <li class="mb-2 px-2 py-1""><a href=" #">Colorize Old Images</a></li>
                 <li class="mb-2 px-2 py-1""><a href=" #">Face to 3D, emoji, pixel art</a></li>
@@ -64,7 +84,7 @@
                 <li class="mb-2 px-2 py-1""><a href=" #">Generate music</a></li>
             </ul>
             <h4 class="text-sm text-[#987A8F] font-medium pb-3 border-b border-[#F2DEDE] mb-4 tracking-wider">TOOLS</h4>
-            <ul class="mb- font-medium text-color tracking-tight">
+            <ul class="mb- font-medium text-color-basic tracking-tight">
                 <li class="mb-2 px-2 py-1"><a href="#">Text to Image Diffusion Model</a></li>
                 <li class="mb-2 p-2 bg-[#DA3CAD]/10 rounded-md"><a href="#">Fill Masked Parts of Images</a></li>
                 <li class="mb-2 px-2 py-1"><a href="#">Sticker Maker</a></li>
@@ -91,26 +111,26 @@
                 <li class="mb-2 px-2 py-1"><a href="#">Caption from Image</a></li>
             </ul>
         </aside>
-        <main class="flex-1 overflow-y-auto  bg-white border m-4 rounded-3xl">
+        <main class="flex-1 flex flex-col justify-start overflow-y-auto  bg-white border m-4 rounded-3xl">
             <div class="flex justify-between items-center px-8  py-4 font-bold">
                 <h2 class="text-2xl tracking-tight text-gray-700">ChatGPT</h2>
             </div>
             <div
-                class="tabs text-[18px] flex justify-start items-center border-y tracking-tight font-medium text-color">
+                class="tabs text-[18px] flex justify-start items-center border-y tracking-tight font-medium text-color-basic">
                 <button class="active py-5 px-9 border-r" onclick="showTab('how-it-works')">How it works?</button>
                 <button class="py-5 px-9 border-r" onclick="showTab('history')">History</button>
                 <button class="py-5 px-9 border-r text-[#CF37B4]" onclick="showTab('start-new-chat')">Start new
                     chat</button>
             </div>
             <section id="how-it-works" class="tab-content active p-12">
-                <h3 class="text-lg text-color font-bold mb-4">How it works?</h3>
-                <p class="text-color text-base font-medium mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing
+                <h3 class="text-lg text-color-basic font-bold mb-4">How it works?</h3>
+                <p class="text-color-basic text-base font-medium mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <div class="examples mb-8">
-                    <h4 class="text-lg text-color font-bold mb-4">Examples</h4>
-                    <ul class="list-disc pl-5 text-color font-medium">
+                    <h4 class="text-lg text-color-basic font-bold mb-4">Examples</h4>
+                    <ul class="list-disc pl-5 text-color-basic font-medium">
                         <li class="mb-2">Ask ChatGPT to write a poem</li>
                         <li class="mb-2">Recipe with what's in my kitchen</li>
                         <li class="mb-2">Study vocabulary</li>
@@ -118,8 +138,8 @@
                     </ul>
                 </div>
                 <div class="image-examples mb-8">
-                    <h4 class="text-lg text-color font-bold mb-4">Examples with images</h4>
-                    <div class="flex gap-4 text-color">
+                    <h4 class="text-lg text-color-basic font-bold mb-4">Examples with images</h4>
+                    <div class="flex gap-4 text-color-basic">
                         <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
                         <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
                         <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
@@ -131,7 +151,7 @@
                     NEW CHAT</a>
             </section>
             <section id="history" class="tab-content p-12 space-y-3">
-                <div class="flex flex-col gap-4 text-color">
+                <div class="flex flex-col gap-4 text-color-basic">
                     <div class="p-2 flex justify-between items-center  text-sm gap-2 border rounded-md w-full xl:w-3/4">
                         <div class="flex justify-start items-center gap-6">
                             <div class="w-24 h-16 bg-[#F9F0F0]  rounded-md"></div>
@@ -149,7 +169,7 @@
                     </div>
                     
                 </div>
-                <div class="flex flex-col gap-4 text-color">
+                <div class="flex flex-col gap-4 text-color-basic">
                     <div class="p-2 flex justify-between items-center  text-sm gap-2 border rounded-md w-full xl:w-3/4">
                         <div class="flex justify-start items-center gap-6">
                             <div class="w-24 h-16 bg-[#F9F0F0]  rounded-md"></div>
@@ -168,38 +188,48 @@
                     
                 </div>
             </section>
-            <section id="start-new-chat" class="tab-content p-12">
-                <div class="p-4">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="bg-purple-700 text-white rounded-full w-8 h-8 flex items-center justify-center">C</div>
-                        <div>
-                            <p class="font-medium text-gray-900">ChatGPT</p>
-                            <p class="text-sm text-gray-500">Hello, I'm here and ready to assist you.</p>
+            <section id="start-new-chat" class="tab-content  flex-1 ">
+                <div class="flex flex-col justify-between h-full">
+                    <div class="flex-1">
+                        <div class="chat p-12 space-y-10">
+                            <div class="flex items-center gap-3 space-x-2 mb-4">
+                                <div class="chat-bubble-other">C</div>
+                                <div>
+                                    <p class="text-sm text-gray-500">ChatGPT</p>
+                                    <p class="text-base font-medium text-color-basic">Hello, I'm here and ready to assist you.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 space-x-2 mb-4">
+                                <img src="/assets/person.png" class="" alt="" srcset="">
+                                  
+                                <div>
+                                    <p class="text-sm text-gray-500">You</p>
+                                    <p class="text-base font-medium text-color-basic">can i use that toll for free</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 space-x-2 mb-4">
+                                <div class="chat-bubble-other">C</div>
+                                <div>
+                                    <p class="text-sm text-gray-500">ChatGPT</p>
+                                    <p class="text-base font-medium text-color-basic">Sorry</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 space-x-2 mb-4">
+                                <img src="/assets/person.png" class="" alt="" srcset="">
+                                <div>
+                                    <p class="text-sm text-gray-500">You</p>
+                                    <p class="text-base font-medium text-color-basic">can i use that toll for free</p>
+                                </div>
+                            </div>
                         </div>
+                        
                     </div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="bg-pink-700 text-white rounded-full w-8 h-8 flex items-center justify-center">You</div>
-                        <div>
-                            <p class="text-sm text-gray-900">can i use that toll for free</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="bg-purple-700 text-white rounded-full w-8 h-8 flex items-center justify-center">C</div>
-                        <div>
-                            <p class="text-sm text-gray-900">Sorry</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="bg-pink-700 text-white rounded-full w-8 h-8 flex items-center justify-center">You</div>
-                        <div>
-                            <p class="text-sm text-gray-900">can i use that toll for free</p>
-                        </div>
+                    <div class="border-t p-4 flex items-center justify-self-end">
+                        <input type="text" class="flex-1 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-700" placeholder="Send a message">
+                        <button class="ml-2 bg-purple-700 text-white px-4 py-2 rounded-lg">Send</button>
                     </div>
                 </div>
-                <div class="border-t p-4 flex items-center">
-                    <input type="text" class="flex-1 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-700" placeholder="Send a message">
-                    <button class="ml-2 bg-purple-700 text-white px-4 py-2 rounded-lg">Send</button>
-                </div>
+                
             </section>
         </main>
     </div>
