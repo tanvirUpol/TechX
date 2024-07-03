@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-1: #584C55;
+    --color-2: #987A8F;
+    --color-3: #31166B;
+
+}
+
+
+/* header and nav */
+.header-area{
+    background-color: white;
+    padding: 40px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-2);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-color-basic {
+    color: var(--color-1);
+}
+
+.chat-bubble-other {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10000px;
+    background-color: #74205C;
+    font-size: 18px;
+    color: white;
+}
+
+
+/* account */
+.account-title{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #D8D8D8;
+    color: var(--color-1);
+    padding: 24px 35px;
+}
+
+.account-label{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-1);
+    text-transform: capitalize;
+    display: block;
+    color: #B5B5B5;
+}
+
+.account-input{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 18px 15px;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.account-check-radio-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    accent-color: var(--color-3);
+
+    input{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.account-bottom-card{
+    /* mt-6 p-4 border rounded-xl border-gray-200 */
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #D8D8D8;
+    color: var(--color-1);
+    font-weight: 500;
+    h2{
+        font-size: 16px;
+    }
+    p{
+        font-size: 13px;
+    }
+
+}
+
+
+.button {
+    background: linear-gradient(to right, #a855f7, #ff66b2);
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background: linear-gradient(to right, #ff66b2, #a855f7);
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.tabs .active {
+    border-bottom: 5px solid var(--color-1);
+}
