@@ -9,6 +9,80 @@
     --color-2: #987A8F;
     --color-3: #31166B;
     --color-4: #FD6666;
+    --color-5: #FCF6F6;
+    --color-6: #FE3B99;
+    --color-7: #FF5252;
+
+}
+
+body{
+    /* flex flex-col h-screen bg-[#FCF6F6]  */
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    background-color: var(--color-5);
+
+}
+
+aside{
+    
+    width: 352px;
+    padding-top: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .recently-list{
+        margin-bottom: 40px;
+        font-weight: 500;
+        color: var(--color-1);
+        letter-spacing: -0.025em;
+    }
+
+    .tools-list{
+        font-weight: 500;
+        color: var(--color-1);
+        letter-spacing: -0.025em;
+    }
+    
+        li{
+            margin-bottom: 8px;
+            padding: 4px 8px;
+        }
+    
+    .recently, .tools{
+        font-size: 0.875rem /* 14px */;
+        line-height: 1.25rem /* 20px */;
+        font-weight: 500;
+        border-bottom-width: 1px;
+        border-color: var(--color-2);
+        padding-bottom: 0.75rem /* 12px */;
+        margin-bottom: 1rem /* 16px */;
+        letter-spacing: 0.05em;
+        display: flex;
+        justify-content: space-between;
+
+       
+
+        h2{
+            color: var(--color-2);
+        }
+        h3{
+            color: var(--color-6);
+        }
+    }
+}
+
+
+main{
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    border-width: 1px;
+    margin: 1rem;
+    border-radius: 1.5rem;
+    background-color: white;
 
 }
 
@@ -35,6 +109,23 @@
     color: var(--color-1);
 }
 
+
+#chat-gpt , #obj-remover{
+    /* flex justify-between items-center px-8  py-5 font-bold text-2xl tracking-tight text-gray-700 border-b */
+    .title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 32px;
+        font-weight: bold;
+        font-size: 1.5rem /* 24px */;
+        line-height: 2rem /* 32px */;
+        letter-spacing: -0.025em;
+        border-bottom: 1px solid #D8D8D8;
+
+    }
+}
+
 .chat-bubble-other {
     width: 42px;
     height: 42px;
@@ -46,6 +137,8 @@
     font-size: 18px;
     color: white;
 }
+
+
 
 
 /* account */
@@ -108,7 +201,172 @@
 }
 
 
-/* slider */
+/* pricing */
+#pricing{
+
+    .pricing-body{
+        /* width: 100%; */
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .pricing-title{
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #D8D8D8;
+        color: var(--color-1);
+        padding: 24px 35px;
+    }
+
+
+
+    .card {
+        width: 400px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px 25px;
+        text-align: center;
+    }
+
+    .name-price{
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        
+    }
+
+    .discount{
+        background: var(--color-4);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-weight: 600;
+    }
+
+    .card h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--color-1);
+    }
+    .card .price {
+        font-size: 33px;
+        color: var(--color-1);
+        font-weight: bold;
+        margin: 5px 0;
+    }
+    .card button {
+        background-color: #ff006a;
+        background-image: linear-gradient(90deg, #ff006a, #832bf9);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    .card button:hover {
+        background-color: #d8005e;
+        background-image: linear-gradient(90deg, #d8005e, #6922c6);
+    }
+    .card ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0 0 0;
+    }
+    .card ul li {
+        display: flex;
+        align-items: center;
+        margin: 13px 0;
+        font-weight: 500;
+        font-size: 15px;
+        color: var(--color-1);
+        gap: 10px;
+
+    }
+
+}
+
+
+
+/* modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    .close{
+        width: 100%;
+        text-align: right;
+        font-size: 30px;
+    }
+  
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 10px 20px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+
+    h2{
+        font-weight: bold;
+        font-size: 24px ;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .description{
+        font-weight: 500;
+        font-size: 16px ;
+    }
+
+
+}
+
+
+.close:hover, .close-modal:hover,
+.close:focus, .close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/* utilities */
+
+.pro{
+    /* text-xs bg-[#FF5252] px-1 , rounded-md text-white font-bold */
+    font-size: 14px;
+    background-color: var(--color-7);
+    padding: 0 4px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+
+}
+
+
 .slider{
 
     width: 100%;
@@ -124,6 +382,18 @@
 .button {
     background: linear-gradient(to right, #a855f7, #ff66b2);
     color: white;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.button-alt {
+    border: 1px solid #a855f7;
+    color: #a855f7;
     font-weight: bold;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -154,6 +424,17 @@
 
 body {
     font-family: "Inter", sans-serif;
+}
+
+.tabs{
+    /* flex justify-start items-center border-b tracking-tight font-medium text-color-basic */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid #D8D8D8;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    color: var(--color-1);
 }
 
 .tabs .active {

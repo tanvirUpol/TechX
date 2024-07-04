@@ -16,39 +16,59 @@
     </style>
 </head>
 
-<body class="flex flex-col h-screen bg-[#FCF6F6] ">
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p class="close">&times;</p>
+            <h2>How it works?</h2>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button class="send button">SEND</button>
+            <button class="close-modal button-alt">CLOSE</button>
+        </div>
+    </div>
     <header class="header-area">
-        <div class="w-10 h-1"></div>
-        <nav class="flex-center gap-8">
+        <div class="w-10 h-1 hidden md:block"></div>
+        <nav class="flex-center gap-8 max-sm:text-xs">
             <a href="#">TOOLS</a>
-            <a href="#">HELP</a>
+            <a id="openModalBtn" href="#">HELP</a>
             <a href="#">CONTACT</a>
+            <a onclick="showAccount('pricing')" href="#">PRICING</a>
         </nav>
-        <button onclick="showAccount('account')" class="flex-center gap-2">
+        <button onclick="showAccount('account')" class="hidden sm:flex justify-center items-center gap-2">
             <p>ACCOUNT</p>
             <p class="text-[#74205C] text-xs">▼</p>
         </button>
+        <a class="block sm:hidden" onclick="showAccount('account')" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-8">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+        </a>
     </header>
     <div class="flex flex-1">
-        <aside class="w-[22rem] hidden lg:block  pt-4 px-5">
-            <div
-                class="text-sm text-[#987A8F] font-medium flex justify-between pb-3 border-b border-[#F2DEDE] mb-4 tracking-wider">
-                <h3 class="">RECENTLY</h3>
-                <h3 class="text-[#FE3B99] ">SEE MORE</h3>
+        <aside class="hidden lg:block">
+            <div class="recently">
+                <h2>RECENTLY</h2>
+                <h3>SEE MORE</h3>
             </div>
-            <ul class="mb-10 font-medium text-color-basic tracking-tight">
-                <li class="mb-2 px-2 py-1"><a href="#">Text to Image Diffusion Model</a></li>
-                <li class="mb-2 px-2 py-1""><a href=" #">Colorize Old Images</a></li>
-                <li class="mb-2 px-2 py-1""><a href=" #">Face to 3D, emoji, pixel art</a></li>
-                <li class="mb-2 px-2 py-1""><a href=" #">Get HDs from low quality photos</a></li>
-                <li class="mb-2 px-2 py-1""><a href=" #">Generate music</a></li>
+            <ul class="recently-list">
+                <li ><a href="#">Text to Image Diffusion Model</a></li>
+                <li ><a href=" #">Colorize Old Images</a></li>
+                <li ><a href=" #">Face to 3D, emoji, pixel art</a></li>
+                <li ><a href=" #">Get HDs from low quality photos</a></li>
+                <li ><a href=" #">Generate music</a></li>
             </ul>
-            <h4 class="text-sm text-[#987A8F] font-medium pb-3 border-b border-[#F2DEDE] mb-4 tracking-wider">TOOLS</h4>
-            <ul class="mb- font-medium text-color-basic tracking-tight">
-                <li class="mb-2 px-2 py-1"><a href="#">Text to Image Diffusion Model</a></li>
+            <div class="tools">
+                <h2>TOOLS</h2>
+            </div>
+            <ul class="tools-list">
+                <li ><a href="#">Text to Image Diffusion Model</a></li>
                 <li class="mb-2 p-2 bg-[#DA3CAD]/10 rounded-md"><a href="#">Fill Masked Parts of Images</a></li>
-                <li class="mb-2 px-2 py-1"><a href="#">Sticker Maker</a></li>
-                <li class="mb-2 px-2 py-1 flex justify-between items-center">
+                <li ><a href="#">Sticker Maker</a></li>
+                <li class=" flex justify-between items-center">
                     <a href="#">Face Restoration</a>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-6 text-[#74205C]">
@@ -58,31 +78,33 @@
                     </svg>
 
                 </li>
-                <li class="mb-2 px-2 py-1"><a href="#">Remove Background</a></li>
-                <li class="mb-2 px-2 py-1 flex items-center gap-4" onclick="showObjRemover('obj-remover')">
+                <li ><a href="#">Remove Background</a></li>
+                <li class=" flex items-center gap-4" onclick="showObjRemover('obj-remover')">
                     <a href="#">Object Removal</a>
-                    <p class="text-xs bg-[#FF5252] px-1 , rounded-md text-white font-bold">PRO</p>
+                    <p class="pro">PRO</p>
                 </li>
-                <li class="mb-2 px-2 py-1"><a href="#">Colorize Old Images</a></li>
-                <li class="mb-2 px-2 py-1"><a href="#">Face to 3D, emoji, pixel art</a></li>
-                <li class="mb-2 px-2 py-1"><a href="#">Face to sticker</a></li>
-                <li class="mb-2 px-2 py-1"><a href="#">Change Clothes</a></li>
-                <li class="mb-2 px-2 py-1"><a href="#">Remove Eye-Glasses</a></li>
-                <li class="mb-2 px-2 py-1"><a href="#">Caption from Image</a></li>
+                <li ><a href="#">Colorize Old Images</a></li>
+                <li ><a href="#">Face to 3D, emoji, pixel art</a></li>
+                <li ><a href="#">Face to sticker</a></li>
+                <li ><a href="#">Change Clothes</a></li>
+                <li ><a href="#">Remove Eye-Glasses</a></li>
+                <li ><a href="#">Caption from Image</a></li>
             </ul>
         </aside>
-        <main class="flex-1 flex flex-col justify-start overflow-y-auto  bg-white border m-4 rounded-3xl">
+        <main>
 
             <!-- chat GPT -->
             <div id="chat-gpt" class="top tab-content active">
-                <div class="flex justify-between items-center px-8  py-4 font-bold">
-                    <h2 class="text-2xl tracking-tight text-gray-700">ChatGPT</h2>
+                <div class="title">
+                    <h2>ChatGPT</h2>
                 </div>
                 <div
-                    class="tabs text-[18px] flex justify-start items-center border-y tracking-tight font-medium text-color-basic">
-                    <button class="active py-5 px-9 border-r" onclick="showChatGptTab('how-it-works')">How it works?</button>
-                    <button class="py-5 px-9 border-r" onclick="showChatGptTab('history')">History</button>
-                    <button class="py-5 px-9 border-r text-[#CF37B4]" onclick="showChatGptTab('start-new-chat')">Start new
+                    class="tabs text-sm md:text-[18px]">
+                    <button class="active py-5 px-5 md:px-9 border-r" onclick="showChatGptTab('how-it-works')">How it
+                        works?</button>
+                    <button class="py-5 px-5 md:px-9 border-r" onclick="showChatGptTab('history')">History</button>
+                    <button class="py-5  px-5 md:px-9 border-r text-[#CF37B4]"
+                        onclick="showChatGptTab('start-new-chat')">Start new
                         chat</button>
                 </div>
                 <section id="how-it-works" class="tab-content active p-12">
@@ -104,7 +126,8 @@
                     <div class="image-examples mb-8">
                         <h4 class="text-lg text-color-basic font-bold mb-4">Examples with images</h4>
                         <div class="flex gap-4 text-color-basic">
-                            <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
+                            <div onclick="showChatGptTab('image-view')"
+                                class="w-24 h-24 bg-[#F9F0F0]  rounded  cursor-pointer"></div>
                             <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
                             <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
                             <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
@@ -114,22 +137,35 @@
                         class="inline-block font-bold text-sm py-4 px-14 bg-gradient-to-r from-[#8530F1] to-[#DA3CAD] text-white rounded-md">START
                         NEW CHAT</a>
                 </section>
+                <section id="image-view" class="tab-content  p-6">
+                    <button onclick="showChatGptTab('how-it-works')"
+                        class="flex-center gap-2 border p-2 pr-4 rounded-xl">
+                        <img src="/assets/arrow.png" alt="back">
+                        <p>Back</p>
+                    </button>
+                    <div class="flex justify-center items-center w-full h-full mt-8">
+                        <div class="p-6 bg-white rounded-lg w-full max-w-3xl">
+                            <div class="w-full h-80 bg-red-100 rounded-lg mb-4"></div>
+                        </div>
+                    </div>
+
+                </section>
                 <section id="history" class="tab-content p-12 space-y-3">
                     <div class="flex flex-col gap-4 text-color-basic">
                         <div
                             class="p-2 flex justify-between items-center  text-sm gap-2 border rounded-md w-full xl:w-3/4">
-                            <div class="flex justify-start items-center gap-6">
-                                <div class="w-24 h-16 bg-[#F9F0F0]  rounded-md"></div>
-                                <p>Uçan halıya binmiş sarı renkli panda</p>
-                            </div>
-                            <div class="flex-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6 font-medium">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                </svg>
-                                <p class="whitespace-nowrap mr-5 md:mr-10">14.02.2024 - 16:30</p>
+                            <div class="w-24 h-16 bg-[#F9F0F0]  rounded-md mr-2"></div>
+                            <div class="flex flex-1 flex-wrap justify-between items-center gap-1">
+                                <p>Uçan hallya binmiş sarl renkli panda</p>
+                                <div class="flex-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6 font-medium">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    <p class="whitespace-nowrap mr-5 md:mr-10">14.02.2024 - 16:30</p>
 
+                                </div>
                             </div>
                         </div>
 
@@ -137,26 +173,27 @@
                     <div class="flex flex-col gap-4 text-color-basic">
                         <div
                             class="p-2 flex justify-between items-center  text-sm gap-2 border rounded-md w-full xl:w-3/4">
-                            <div class="flex justify-start items-center gap-6">
-                                <div class="w-24 h-16 bg-[#F9F0F0]  rounded-md"></div>
-                                <p>Uçan halıya binmiş sarı renkli panda</p>
-                            </div>
-                            <div class="flex-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6 font-medium">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                </svg>
-                                <p class="whitespace-nowrap mr-5 md:mr-10">14.02.2024 - 16:30</p>
+                            <div class="w-24 h-16 bg-[#F9F0F0]  rounded-md mr-2"></div>
+                            <div class="flex flex-1 flex-wrap justify-between items-center gap-1">
+                                <p>Uçan hallya binmiş sarl renkli panda</p>
+                                <div class="flex-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6 font-medium">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    <p class="whitespace-nowrap mr-5 md:mr-10">14.02.2024 - 16:30</p>
 
+                                </div>
                             </div>
                         </div>
 
                     </div>
+
                 </section>
                 <section id="start-new-chat" class="tab-content  flex-1 h-full">
                     <div class="flex flex-col justify-between h-full">
-                        <div class="">
+                        <div >
                             <div class="chat p-12 space-y-10">
                                 <div class="flex items-center gap-3 space-x-2 mb-4">
                                     <div class="chat-bubble-other">C</div>
@@ -167,7 +204,7 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-3 space-x-2 mb-4">
-                                    <img src="/assets/person.png" class="" alt="" srcset="">
+                                    <img src="/assets/person.png"  alt="" srcset="">
 
                                     <div>
                                         <p class="text-sm text-gray-500">You</p>
@@ -183,7 +220,7 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-3 space-x-2 mb-4">
-                                    <img src="/assets/person.png" class="" alt="" srcset="">
+                                    <img src="/assets/person.png"  alt="" srcset="">
                                     <div>
                                         <p class="text-sm text-gray-500">You</p>
                                         <p class="text-base font-medium text-color-basic">can i use that toll for free
@@ -203,7 +240,7 @@
 
                             <input type="text" class="flex-1  px-4 py-2 focus:outline-none "
                                 placeholder="Send a message">
-                            <button class="">
+                            <button >
                                 <img src="/assets/send-button.png" alt="" srcset="">
                             </button>
                         </div>
@@ -213,7 +250,7 @@
             </div>
 
 
-            <!-- accounr -->
+            <!-- account -->
             <section id="account" class="top tab-content  account-section">
                 <h1 class="account-title">Account</h1>
                 <div class="w-4/5 md:w-1/2 lg:w-1/3 mx-auto">
@@ -280,17 +317,15 @@
 
 
 
-                        <button
-                            class="button"
-                            type="button">
+                        <button class="button" type="button">
                             Send
                         </button>
 
                     </form>
 
                     <div class="account-bottom-card">
-                        <h2 class="">Başlık</h2>
-                        <p class="">
+                        <h2 >Başlık</h2>
+                        <p >
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo.
@@ -302,89 +337,31 @@
 
 
             <!-- onj remover -->
-            <div id="obj-remover" class="top tab-content active">
-                <div class="flex justify-between items-center px-8  py-4 font-bold">
+            <div id="obj-remover" class="top tab-content ">
+                <div class="title">
                     <h2 class="text-2xl tracking-tight text-gray-700">Object Remover</h2>
                 </div>
                 <div
-                    class="tabs text-[18px] flex justify-start items-center border-y tracking-tight font-medium text-color-basic">
-                    <button  class="active py-5 px-9 border-r or-how-it-works" onclick="showObjRemover('or-how-it-works')">How it works?</button>
+                    class="tabs text-sm md:text-[18px]">
+                    <button class=" py-5 px-9 border-r or-how-it-works"
+                        onclick="showObjRemover('or-how-it-works')">How it works?</button>
                     <button class="py-5 px-9 border-r" onclick="showObjRemover('or-history')">History</button>
-                    <button class="py-5 px-9 border-r text-[#CF37B4]" onclick="showObjRemover('new-obj-remover')">New</button>
+                    <button class="py-5 px-9 border-r text-[#CF37B4] flex justify-center items-center gap-2"
+                        onclick="showObjRemover('new-obj-remover')">
+                        <img src="/assets/add-icon.png" alt="" srcset="">
+                        <p>New</p>
+                    </button>
                 </div>
                 <section id="or-how-it-works" class="tab-content active p-12">
-                    <h3 class="text-lg text-color-basic font-bold mb-4">How it works?</h3>
-                    <p class="text-color-basic text-base font-medium mb-8">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing
-                        elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <div class="examples mb-8">
-                        <h4 class="text-lg text-color-basic font-bold mb-4">Examples</h4>
-                        <ul class="list-disc pl-5 text-color-basic font-medium">
-                            <li class="mb-2">Ask ChatGPT to write a poem</li>
-                            <li class="mb-2">Recipe with what's in my kitchen</li>
-                            <li class="mb-2">Study vocabulary</li>
-                            <li class="mb-2">Plan a relaxing day</li>
-                        </ul>
-                    </div>
-                    <div class="image-examples mb-8">
-                        <h4 class="text-lg text-color-basic font-bold mb-4">Examples with images</h4>
-                        <div class="flex gap-4 text-color-basic">
-                            <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
-                            <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
-                            <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
-                            <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
-                        </div>
-                    </div>
-                    <a href="#"
-                        class="inline-block font-bold text-sm py-4 px-14 bg-gradient-to-r from-[#8530F1] to-[#DA3CAD] text-white rounded-md">START
-                        NEW CHAT</a>
+
                 </section>
                 <section id="or-history" class="tab-content p-12 space-y-3">
-                    <div class="flex flex-col gap-4 text-color-basic">
-                        <div
-                            class="p-2 flex justify-between items-center  text-sm gap-2 border rounded-md w-full xl:w-3/4">
-                            <div class="flex justify-start items-center gap-6">
-                                <div class="w-24 h-16 bg-[#F9F0F0]  rounded-md"></div>
-                                <p>Uçan halıya binmiş sarı renkli panda</p>
-                            </div>
-                            <div class="flex-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6 font-medium">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                </svg>
-                                <p class="whitespace-nowrap mr-5 md:mr-10">14.02.2024 - 16:30</p>
 
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="flex flex-col gap-4 text-color-basic">
-                        <div
-                            class="p-2 flex justify-between items-center  text-sm gap-2 border rounded-md w-full xl:w-3/4">
-                            <div class="flex justify-start items-center gap-6">
-                                <div class="w-24 h-16 bg-[#F9F0F0]  rounded-md"></div>
-                                <p>Uçan halıya binmiş sarı renkli panda</p>
-                            </div>
-                            <div class="flex-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6 font-medium">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                </svg>
-                                <p class="whitespace-nowrap mr-5 md:mr-10">14.02.2024 - 16:30</p>
-
-                            </div>
-                        </div>
-
-                    </div>
                 </section>
-                <section id="new-obj-remover" class="tab-content w-full  flex-1 h-full ">
+                <section id="new-obj-remover" class="active tab-content w-full  flex-1 h-full ">
                     <div class="flex justify-center items-center w-full h-full">
-                        <div class="w-1/4 " >
-                            
+                        <div class="w-3/4 md:w-1/4 ">
+
                             <button onclick="showObjRemover('new-obj-remover-image')" class="button flex-center gap-3">
                                 <img src="/assets/up-image-icon.png" class="w-6 h-6" alt="" srcset="">
                                 <p>SELECT A PICTURE</p>
@@ -397,124 +374,268 @@
                         <div class="p-6 bg-white rounded-lg w-full max-w-3xl">
                             <!-- Rectangular Area -->
                             <div class="w-full h-80 bg-red-100 rounded-lg mb-4"></div>
-                            
+
                             <!-- Slider and Buttons -->
                             <div class="flex items-center justify-between space-x-4">
                                 <!-- Brush Size Slider -->
                                 <div class="flex items-center gap-2 space-x-2 flex-1 w-full">
-                                    <p for="brushSize" class="account-label whitespace-nowrap text-gray-700">Brush Size</p>
+                                    <p for="brushSize" class="account-label whitespace-nowrap text-gray-700">Brush Size
+                                    </p>
                                     <input type="range" min="1" max="100" value="50" class="slider">
                                 </div>
 
                                 <div class="flex justify-center gap-3">
                                     <!-- Before Button -->
-                                    <button class="flex justify-center items-center  gap-2 px-4 py-2 border text-gray-700 rounded-lg hover:bg-gray-300">
+                                    <button
+                                        class="flex justify-center items-center  gap-2 px-4 py-2 border text-gray-700 rounded-lg hover:bg-gray-300">
                                         <img src="/assets/direction-icon.png" class="rotate-180" alt="" srcset="">
                                         <p>Before</p>
                                     </button>
                                     <!-- After Button -->
-                                    <button class="flex justify-center items-center gap-2 px-4 py-2 border text-gray-700 rounded-lg hover:bg-gray-300">
-                                        <p>After</p> 
+                                    <button
+                                        class="flex justify-center items-center gap-2 px-4 py-2 border text-gray-700 rounded-lg hover:bg-gray-300">
+                                        <p>After</p>
                                         <img src="/assets/direction-icon.png" alt="" srcset="">
                                     </button>
                                 </div>
                             </div>
-                    </div>
+                        </div>
                 </section>
+            </div>
+
+            <!-- pricing -->
+            <div id="pricing" class="top tab-content ">
+
+                <h2 class="pricing-title">Pricing</h2>
+
+                <div class=" md:w-3/4 lg:w-2/4 mx-auto mt-16">
+                    <div class="pricing-body flex flex-col md:flex-row">
+                        <div class="card">
+                            <div class="name-price">
+                                <div>
+                                    <h2 class="name">Aylık</h2>
+                                    <div class="price">$30</div>
+                                </div>
+                            </div>
+                            <button class="button">UPGRADE</button>
+                            <ul>
+
+                                <li>
+                                    <img src="/assets/check-mark.png" alt="">
+                                    <p>Create and use custom GPTs</p>
+                                </li>
+                                <li>
+                                    <img src="/assets/check-mark.png" alt="">
+                                    <p>Create and use custom GPTs</p>
+                                </li>
+                                <li>
+                                    <img src="/assets/check-mark.png" alt="">
+                                    <p>Create and use custom GPTs</p>
+                                </li>
+                                <li>
+                                    <img src="/assets/check-mark.png" alt="">
+                                    <p>Create and use custom GPTs</p>
+                                </li>
+                                <li>
+                                    <img src="/assets/check-mark.png" alt="">
+                                    <p>Create and use custom GPTs</p>
+                                </li>
+                                <li>
+                                    <img src="/assets/check-mark.png" alt="">
+                                    <p>Create and use custom GPTs</p>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <div class="name-price">
+                                <div>
+                                    <h2 class="name">Yıllık</h2>
+                                    <div class="price">$110</div>
+                                </div>
+
+                                <p class="discount">40% OFF</p>
+
+                            </div>
+                            <button class="button">UPGRADE</button>
+                            <ul>
+
+                                <li>
+                                    <img src="/assets/check-mark.png" alt="">
+                                    <p>Create and use custom GPTs</p>
+                                </li>
+                                <li>
+                                    <img src="/assets/check-mark.png" alt="">
+                                    <p>Create and use custom GPTs</p>
+                                </li>
+                                <li>
+                                    <img src="/assets/check-mark.png" alt="">
+                                    <p>Create and use custom GPTs</p>
+                                </li>
+                                <li>
+                                    <img src="/assets/check-mark.png" alt="">
+                                    <p>Create and use custom GPTs</p>
+                                </li>
+                                <li>
+                                    <img src="/assets/check-mark.png" alt="">
+                                    <p>Create and use custom GPTs</p>
+                                </li>
+                                <li>
+                                    <img src="/assets/check-mark.png" alt="">
+                                    <p>Create and use custom GPTs</p>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <div class="account-bottom-card mx-auto">
+                        <h2 >Başlık</h2>
+                        <p >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo.
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+
             </div>
 
         </main>
     </div>
 
-    <script>
-        function showChatGptTab(tabId) {
-
-            document.querySelectorAll('.top.tab-content').forEach(function (content) {
-                content.classList.remove('active');
-            });
-
-            document.querySelectorAll('#chat-gpt').forEach(function (content) {
-                content.classList.add('active');
-            });
-
-            // Hide all tab contents
-            document.querySelectorAll('#chat-gpt .tab-content').forEach(function (content) {
-                content.classList.remove('active');
-            });
-
-            // Remove active class from all tab buttons
-            document.querySelectorAll('#chat-gpt .tabs button').forEach(function (tab) {
-                tab.classList.remove('active');
-            });
-
-            // Show the selected tab content
-            document.getElementById(tabId).classList.add('active');
-
-            // Add active class to the selected tab button
-            event.target.classList.add('active');
-        }
-
-        
-        function showObjRemover(tabId) {
-
-            document.querySelectorAll('.top.tab-content').forEach(function (content) {
-                content.classList.remove('active');
-            });
-
-            document.querySelectorAll('#obj-remover').forEach(function (content) {
-                content.classList.add('active');
-            });
-
-            // Hide all tab contents
-            if(tabId !== "obj-remover"){
-                document.querySelectorAll('#obj-remover .tab-content').forEach(function (content) {
-                    content.classList.remove('active');
-                });
-            }
-            if(tabId === "obj-remover"){
-                // document.querySelectorAll('#obj-remover .tab-content').forEach(function (content) {
-                //     content.classList.remove('active');
-                // });
-                document.getElementsByClassName("or-how-it-works").classList.add('active');
-            }
-
-            // Remove active class from all tab buttons
-            document.querySelectorAll('#obj-remover .tabs button').forEach(function (tab) {
-                tab.classList.remove('active');
-            });
-
-
-
-            // Show the selected tab content
-            document.getElementById(tabId).classList.add('active');
-
-            // Add active class to the selected tab button
-            event.target.classList.add('active');
-        }
-
-
-
-
-
-        function showAccount(tabId) {
-
-
-            document.querySelectorAll('.top.tab-content').forEach(function (content) {
-                content.classList.remove('active');
-            });
-
-
-            // Hide all tab contents
-            document.querySelectorAll('#account.tab-content').forEach(function (content) {
-                content.classList.remove('active');
-            });
-
-
-            // Show the selected tab content
-            document.getElementById(tabId).classList.add('active');
-
-        }
-    </script>
 </body>
+<script>
+    function showChatGptTab(tabId) {
+
+        document.querySelectorAll('.top.tab-content').forEach(function (content) {
+            content.classList.remove('active');
+        });
+
+        document.querySelectorAll('#chat-gpt').forEach(function (content) {
+            content.classList.add('active');
+        });
+
+        // Hide all tab contents
+        document.querySelectorAll('#chat-gpt .tab-content').forEach(function (content) {
+            content.classList.remove('active');
+        });
+
+        // Remove active class from all tab buttons
+        document.querySelectorAll('#chat-gpt .tabs button').forEach(function (tab) {
+            tab.classList.remove('active');
+        });
+
+        // Show the selected tab content
+        document.getElementById(tabId).classList.add('active');
+
+        // Add active class to the selected tab button
+        event.target.classList.add('active');
+    }
+
+
+    function showObjRemover(tabId) {
+
+        document.querySelectorAll('.top.tab-content').forEach(function (content) {
+            content.classList.remove('active');
+        });
+
+        document.querySelectorAll('#obj-remover').forEach(function (content) {
+            content.classList.add('active');
+        });
+
+        // Hide all tab contents
+        if (tabId !== "obj-remover") {
+            document.querySelectorAll('#obj-remover .tab-content').forEach(function (content) {
+                content.classList.remove('active');
+            });
+        }
+        if (tabId === "obj-remover") {
+            // document.querySelectorAll('#obj-remover .tab-content').forEach(function (content) {
+            //     content.classList.remove('active');
+            // });
+            document.getElementsByClassName("or-how-it-works").classList.add('active');
+        }
+
+        // Remove active class from all tab buttons
+        document.querySelectorAll('#obj-remover .tabs button').forEach(function (tab) {
+            tab.classList.remove('active');
+        });
+
+
+
+        // Show the selected tab content
+        document.getElementById(tabId).classList.add('active');
+
+        // Add active class to the selected tab button
+        event.target.classList.add('active');
+    }
+
+
+
+
+
+    function showAccount(tabId) {
+
+
+        document.querySelectorAll('.top.tab-content').forEach(function (content) {
+            content.classList.remove('active');
+        });
+
+
+        // Hide all tab contents
+        document.querySelectorAll('#account.tab-content').forEach(function (content) {
+            content.classList.remove('active');
+        });
+
+
+        // Show the selected tab content
+        document.getElementById(tabId).classList.add('active');
+
+    }
+
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("openModalBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Get the close button inside the modal
+    var closeModalBtn = document.getElementsByClassName("close-modal")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks on close button inside the modal, close the modal
+    closeModalBtn.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+</script>
 
 </html>
