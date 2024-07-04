@@ -385,11 +385,40 @@
                     <div class="flex justify-center items-center w-full h-full">
                         <div class="w-1/4 " >
                             
-                            <button class="button flex-center gap-3">
+                            <button onclick="showObjRemover('new-obj-remover-image')" class="button flex-center gap-3">
                                 <img src="/assets/up-image-icon.png" class="w-6 h-6" alt="" srcset="">
                                 <p>SELECT A PICTURE</p>
                             </button>
                         </div>
+                    </div>
+                </section>
+                <section id="new-obj-remover-image" class="tab-content w-full  flex-1 h-full ">
+                    <div class="flex justify-center items-center w-full h-full">
+                        <div class="p-6 bg-white rounded-lg w-full max-w-3xl">
+                            <!-- Rectangular Area -->
+                            <div class="w-full h-80 bg-red-100 rounded-lg mb-4"></div>
+                            
+                            <!-- Slider and Buttons -->
+                            <div class="flex items-center justify-between space-x-4">
+                                <!-- Brush Size Slider -->
+                                <div class="flex items-center gap-2 space-x-2 flex-1 w-full">
+                                    <p for="brushSize" class="account-label whitespace-nowrap text-gray-700">Brush Size</p>
+                                    <input type="range" min="1" max="100" value="50" class="slider">
+                                </div>
+
+                                <div class="flex justify-center gap-3">
+                                    <!-- Before Button -->
+                                    <button class="flex justify-center items-center  gap-2 px-4 py-2 border text-gray-700 rounded-lg hover:bg-gray-300">
+                                        <img src="/assets/direction-icon.png" class="rotate-180" alt="" srcset="">
+                                        <p>Before</p>
+                                    </button>
+                                    <!-- After Button -->
+                                    <button class="flex justify-center items-center gap-2 px-4 py-2 border text-gray-700 rounded-lg hover:bg-gray-300">
+                                        <p>After</p> 
+                                        <img src="/assets/direction-icon.png" alt="" srcset="">
+                                    </button>
+                                </div>
+                            </div>
                     </div>
                 </section>
             </div>
