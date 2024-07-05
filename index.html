@@ -21,7 +21,7 @@
         <div class="modal-content">
             <p class="close">&times;</p>
             <h2>How it works?</h2>
-            <p class="description mb-[51px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            <p class="description mb-[51px] text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -182,17 +182,17 @@
                 </div>
                 <div class="tabs text-sm md:text-[18px]">
                     <button class="active  border-r" onclick="showChatGptTab('how-it-works')">
-                        <p class="py-5 px-5 md:px-9"> How it works?</p>
+                        <p class="py-5 max-sm:px-3 px-5 md:px-9"> How it works?</p>
 
                         <div class="selected-tab"></div>
                     </button>
                     <button class=" border-r" onclick="showChatGptTab('history')">
-                        <p class="py-5 px-5 md:px-9">History</p>
+                        <p class="py-5 max-sm:px-3 px-5 md:px-9">History</p>
 
                         <div class="selected-tab"></div>
                     </button>
                     <button id="custom-underline" class="border-r text-[#CF37B4]" onclick="showChatGptTab('start-new-chat')">
-                        <p class="py-5 px-5 md:px-9">Start new chat</p>
+                        <p class="py-5 max-sm:px-3 px-5 md:px-9">Start new chat</p>
                         <div class="selected-tab"></div>
                     </button>
                 </div>
@@ -240,11 +240,11 @@
                     </div>
 
                 </section>
-                <section id="history" class="tab-content p-12 space-y-3">
+                <section id="history" class="tab-content p-4 md:p-12 space-y-3">
                     <div class="flex flex-col gap-4 text-color-basic">
                         <div
                             class="p-2 flex justify-between items-center  text-sm gap-2 border rounded-md w-full xl:w-3/4">
-                            <div class="w-20 sm:w-24 h-12 sm:h-16 bg-[#F9F0F0]  rounded-md mr-2"></div>
+                            <div class="w-16 sm:w-24 h-12 sm:h-16 bg-[#F9F0F0]  rounded-md mr-2"></div>
                             <div class="flex flex-1 flex-wrap justify-between items-center gap-1">
                                 <p>Uçan hallya binmiş sarl renkli panda</p>
                                 <div class="flex-center gap-2">
@@ -253,7 +253,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                     </svg>
-                                    <p class="whitespace-nowrap mr-5 md:mr-10">14.02.2024 - 16:30</p>
+                                    <p class="mr-5 md:mr-10">14.02.2024 - 16:30</p>
 
                                 </div>
                             </div>
@@ -263,7 +263,7 @@
                     <div class="flex flex-col gap-4 text-color-basic">
                         <div
                             class="p-2 flex justify-between items-center  text-sm gap-2 border rounded-md w-full xl:w-3/4">
-                            <div class="w-20 sm:w-24 h-12 sm:h-16  bg-[#F9F0F0] flex justify-center items-center rounded-md mr-2">
+                            <div class="w-16 sm:w-24 h-12 sm:h-16  bg-[#F9F0F0] flex justify-center items-center rounded-md mr-2">
                                 <img src="assets/AB.svg" alt="">
                             </div>
                             <div class="flex flex-1 flex-wrap justify-between items-center gap-1">
@@ -274,7 +274,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                     </svg>
-                                    <p class="whitespace-nowrap mr-5 md:mr-10">14.02.2024 - 16:30</p>
+                                    <p class=" mr-5 md:mr-10">14.02.2024 - 16:30</p>
 
                                 </div>
                             </div>
@@ -285,9 +285,9 @@
                 </section>
                 <section id="start-new-chat" class="tab-content  flex-1">
                     <div id="select-chat-id"
-                        class="select-chat-class  absolute  top-0 left-0 transform  w-screen h-screen flex justify-center items-center bg-[#0e0923bf] z-50 ">
+                        class="select-chat-class   absolute  top-0 left-0 transform  w-screen h-screen flex justify-center items-center bg-[#0e0923bf] z-50 ">
                         <div class="w-[380px] sm:w-[400px] md:w-[800px] p-6 rounded-lg shadow-lg border bg-white">
-                            <div class="flex justify-start items-center w-full mb-[54px]">
+                            <div class="flex justify-start items-center w-full max-sm:mb-8 mb-[54px]">
                                 <div class="flex justify-center mb-4">
                                     <div class="flex justify-start flex-wrap gap-2 w-full">
                                         <input type="radio" id="chatgpt" name="model" class="hidden peer/chatgpt"
@@ -295,7 +295,7 @@
                                         <label for="chatgpt" onclick="showChatGptTab('start-new-chat')"
                                             class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/chatgpt:bg-[#090B42] peer-checked/chatgpt:text-white flex justify-center items-center gap-2">
                                             <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
-                                            <p class="font-semibold text-base px-2">ChatGPT</p>
+                                            <p class="font-semibold max-sm:text-xs text-base px-2">ChatGPT</p>
                                         </label>
 
 
@@ -303,7 +303,7 @@
                                         <label for="gpt-4" onclick="showChatGptTab('start-new-chat')"
                                             class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/gpt-4:bg-[#090B42] peer-checked/gpt-4:text-white flex justify-center items-center gap-2">
                                             <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
-                                            <p class="font-semibold text-base px-2">GPT-4</p>
+                                            <p class="font-semibold max-sm:text-xs text-base px-2">GPT-4</p>
                                         </label>
 
 
@@ -311,7 +311,7 @@
                                         <label for="gpt-4o" onclick="showChatGptTab('start-new-chat')"
                                             class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/gpt-4o:bg-[#090B42] peer-checked/gpt-4o:text-white flex justify-center items-center gap-2">
                                             <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
-                                            <p class="font-semibold text-base px-2">GPT-4o</p>
+                                            <p class="font-semibold max-sm:text-xs text-base px-2">GPT-4o</p>
                                         </label>
 
 
@@ -320,12 +320,12 @@
                                         <label for="google-gemini" onclick="showChatGptTab('start-new-chat')"
                                             class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/google-gemini:bg-[#090B42] peer-checked/google-gemini:text-white flex justify-center items-center gap-2">
                                             <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
-                                            <p class="font-semibold text-base px-2">Google Gemini</p>
+                                            <p class="font-semibold max-sm:text-xs text-base px-2">Google Gemini</p>
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <h2 class="text-start font-bold text-[22px] text-[#584C55] mb-[30px]">ChatGPT</h2>
+                            <h2 class="text-start font-bold text-[22px] text-[#584C55] max-sm:mb-4 mb-[30px]">ChatGPT</h2>
                             <p class="text-start text-[#584C55] font-medium text-base mb-6">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -601,7 +601,7 @@
 
                 <div class=" mt-16">
                     <div class="pricing-body flex flex-col sm:flex-row">
-                        <div class="card w-[350px]  md:w-[370px] lg:w-[400px]">
+                        <div class="card w-[320px]  md:w-[370px] lg:w-[400px]">
                             <div class="name-price">
                                 <div>
                                     <h2 class="name">Aylık</h2>
@@ -639,7 +639,7 @@
                             </ul>
                         </div>
 
-                        <div class="card w-[350px]  md:w-[370px] lg:w-[400px]">
+                        <div class="card w-[320px]  md:w-[370px] lg:w-[400px]">
                             <div class="name-price">
                                 <div>
                                     <h2 class="name">Yıllık</h2>
@@ -682,7 +682,7 @@
 
 
                     </div>
-                    <div class="account-bottom-card w-[350px] md:w-[790px] lg:w-[850px] mx-auto">
+                    <div class="account-bottom-card w-[320px] md:w-[790px] lg:w-[850px] mx-auto">
                         <h2>Başlik</h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
