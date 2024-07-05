@@ -145,6 +145,7 @@
         const hamburgerMenu = document.getElementById('hamburgerMenu');
         const sidebar = document.getElementById('sidebar');
         const closeButton = document.getElementById('closeButton');
+        const objRemoverLinkClick = document.getElementById('m-obj-remover');
         let isSidebarOpen = false;
 
         function toggleSidebar() {
@@ -160,6 +161,7 @@
 
         hamburgerMenu.addEventListener('click', toggleSidebar);
         closeButton.addEventListener('click', toggleSidebar);
+        objRemoverLinkClick.addEventListener('click', toggleSidebar);
     });
 
     // sidebar end
