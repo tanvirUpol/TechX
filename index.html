@@ -214,7 +214,7 @@
                     </div>
                     <div class="image-examples mb-8">
                         <h4 class="text-lg text-color-basic font-bold mb-4">Examples with images</h4>
-                        <div class="flex gap-4 text-color-basic">
+                        <div class="flex gap-4 text-color-basic flex-wrap">
                             <div onclick="showChatGptTab('image-view')"
                                 class="w-24 h-24 bg-[#F9F0F0]  rounded  cursor-pointer"></div>
                             <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
@@ -223,8 +223,9 @@
                         </div>
                     </div>
                     <button href="#"
-                        class="button w-[260px] font-bold text-[15px]">START
-                        NEW CHAT</button>
+                        class="button w-[230px] font-bold text-[15px]">START
+                        NEW CHAT
+                    </button>
                 </section>
                 <section id="image-view" class="tab-content  p-6">
                     <button onclick="showChatGptTab('how-it-works')"
@@ -565,7 +566,7 @@
                             <div class="w-full h-80 bg-red-100 rounded-lg mb-4"></div>
 
                             <!-- Slider and Buttons -->
-                            <div class="flex items-center justify-between space-x-4">
+                            <div class="flex flex-col gap-2 md:flex-row items-center justify-between">
                                 <!-- Brush Size Slider -->
                                 <div
                                     class="flex items-center gap-2 space-x-2 flex-1 w-full border text-gray-700 px-4 py-3 rounded-lg">
@@ -574,16 +575,16 @@
                                     <input type="range" min="1" max="100" value="1" class="slider">
                                 </div>
 
-                                <div class="flex justify-center gap-3">
+                                <div class="flex  max-sm:w-full gap-3">
                                     <!-- Before Button -->
                                     <button
-                                        class="flex justify-center items-center  gap-2 px-4 py-3 border text-gray-700 rounded-lg hover:bg-gray-300">
+                                        class="flex max-sm:w-full justify-center items-center  gap-2 px-4 py-3 border text-gray-700 rounded-lg hover:bg-gray-300">
                                         <img src="assets/direction-icon.svg" class="rotate-180" alt="" srcset="">
                                         <p>Before</p>
                                     </button>
                                     <!-- After Button -->
                                     <button
-                                        class="flex justify-center items-center gap-2 px-4 py-3 border text-gray-700 rounded-lg hover:bg-gray-300">
+                                        class="flex max-sm:w-full justify-center items-center gap-2 px-4 py-3 border text-gray-700 rounded-lg hover:bg-gray-300">
                                         <p>After</p>
                                         <img src="assets/direction-icon.svg" alt="" srcset="">
                                     </button>
