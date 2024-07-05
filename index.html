@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
     <title>Full Page Layout</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
 
@@ -21,7 +21,8 @@
         <div class="modal-content">
             <p class="close">&times;</p>
             <h2>How it works?</h2>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <p class="description mb-[51px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat.</p>
             <button class="send button">SEND</button>
@@ -29,24 +30,105 @@
         </div>
     </div>
     <header class="header-area">
-        <div class="w-10 h-1 hidden md:block"></div>
-        <nav class="flex-center gap-8 max-sm:text-xs">
+        <div class="w-10 h-1 hidden lg:block"></div>
+
+        <!-- Hamburger Menu -->
+        <svg id="hamburgerMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6 lg:hidden cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>
+
+
+        <!-- Sidebar for small screen -->
+        <div id="sidebar"
+            class="fixed block lg:hidden top-0 left-0 z-50 h-full w-full  sm:w-2/4 bg-white shadow-lg transform -translate-x-[800px]">
+            <div class="p-4">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-xl font-bold">Sidebar </h2>
+                    <!-- Close Button -->
+                    <svg id="closeButton" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6 cursor-pointer">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </div>
+                <aside class="block lg:hidden">
+                    <div class="recently">
+                        <h2>RECENTLY</h2>
+                        <h3>SEE MORE</h3>
+                    </div>
+                    <ul class="recently-list">
+                        <li><a href="#">Text to Image Diffusion Model</a></li>
+                        <li><a href=" #">Colorize Old Images</a></li>
+                        <li><a href=" #">Face to 3D, emoji, pixel art</a></li>
+                        <li><a href=" #">Get HDs from low quality photos</a></li>
+                        <li><a href=" #">Generate music</a></li>
+                    </ul>
+                    <div class="tools">
+                        <h2>TOOLS</h2>
+                    </div>
+                    <ul class="tools-list">
+                        <li><a href="#">Text to Image Diffusion Model</a></li>
+                        <li class="mb-2 p-2 bg-[#DA3CAD]/10 rounded-md"><a href="#">Fill Masked Parts of Images</a></li>
+                        <li><a href="#">Sticker Maker</a></li>
+                        <li class=" flex justify-between items-center">
+                            <a href="#">Face Restoration</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 text-[#74205C]">
+                                <path fill-rule="evenodd"
+                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                        </li>
+                        <li><a href="#">Remove Background</a></li>
+                        <li class=" flex items-center gap-4" onclick="showObjRemover('obj-remover')">
+                            <a href="#">Object Removal</a>
+                            <p class="pro">PRO</p>
+                        </li>
+                        <li><a href="#">Colorize Old Images</a></li>
+                        <li><a href="#">Face to 3D, emoji, pixel art</a></li>
+                        <li><a href="#">Face to sticker</a></li>
+                        <li><a href="#">Change Clothes</a></li>
+                        <li><a href="#">Remove Eye-Glasses</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+
+        <nav class="flex-center gap-8 hidden lg:flex max-sm:text-xs">
             <a href="#">TOOLS</a>
             <a id="openModalBtn" href="#">HELP</a>
             <a href="#">CONTACT</a>
             <a onclick="showAccount('pricing')" href="#">PRICING</a>
         </nav>
-        <button onclick="showAccount('account')" class="hidden sm:flex justify-center items-center gap-2">
+        <button onclick="showAccount('account')" class="hidden lg:flex justify-center items-center gap-2">
             <p>ACCOUNT</p>
             <p class="text-[#74205C] text-xs">▼</p>
         </button>
-        <a class="block sm:hidden" onclick="showAccount('account')" href="#">
+        <!-- <div class="block lg:hidden" onclick="showAccount('account')" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-8">
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
             </svg>
-        </a>
+        </div> -->
+        <div class="dropdown block lg:hidden">
+            <div class="block lg:hidden" id="dropdownToggle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+            </div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a onclick="showAccount('account')" href="#">Account</a>
+                <a href="#">Tool</a>
+                <a id="openModalBtn2" href="#">Help</a>
+                <a onclick="showAccount('pricing')" href="#">Pricing</a>
+            </div>
+        </div>
     </header>
     <div class="flex flex-1">
         <aside class="hidden lg:block">
@@ -55,19 +137,19 @@
                 <h3>SEE MORE</h3>
             </div>
             <ul class="recently-list">
-                <li ><a href="#">Text to Image Diffusion Model</a></li>
-                <li ><a href=" #">Colorize Old Images</a></li>
-                <li ><a href=" #">Face to 3D, emoji, pixel art</a></li>
-                <li ><a href=" #">Get HDs from low quality photos</a></li>
-                <li ><a href=" #">Generate music</a></li>
+                <li><a href="#">Text to Image Diffusion Model</a></li>
+                <li><a href=" #">Colorize Old Images</a></li>
+                <li><a href=" #">Face to 3D, emoji, pixel art</a></li>
+                <li><a href=" #">Get HDs from low quality photos</a></li>
+                <li><a href=" #">Generate music</a></li>
             </ul>
             <div class="tools">
                 <h2>TOOLS</h2>
             </div>
             <ul class="tools-list">
-                <li ><a href="#">Text to Image Diffusion Model</a></li>
+                <li><a href="#">Text to Image Diffusion Model</a></li>
                 <li class="mb-2 p-2 bg-[#DA3CAD]/10 rounded-md"><a href="#">Fill Masked Parts of Images</a></li>
-                <li ><a href="#">Sticker Maker</a></li>
+                <li><a href="#">Sticker Maker</a></li>
                 <li class=" flex justify-between items-center">
                     <a href="#">Face Restoration</a>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -78,17 +160,17 @@
                     </svg>
 
                 </li>
-                <li ><a href="#">Remove Background</a></li>
+                <li><a href="#">Remove Background</a></li>
                 <li class=" flex items-center gap-4" onclick="showObjRemover('obj-remover')">
                     <a href="#">Object Removal</a>
                     <p class="pro">PRO</p>
                 </li>
-                <li ><a href="#">Colorize Old Images</a></li>
-                <li ><a href="#">Face to 3D, emoji, pixel art</a></li>
-                <li ><a href="#">Face to sticker</a></li>
-                <li ><a href="#">Change Clothes</a></li>
-                <li ><a href="#">Remove Eye-Glasses</a></li>
-                <li ><a href="#">Caption from Image</a></li>
+                <li><a href="#">Colorize Old Images</a></li>
+                <li><a href="#">Face to 3D, emoji, pixel art</a></li>
+                <li><a href="#">Face to sticker</a></li>
+                <li><a href="#">Change Clothes</a></li>
+                <li><a href="#">Remove Eye-Glasses</a></li>
+                <li><a href="#">Caption from Image</a></li>
             </ul>
         </aside>
         <main>
@@ -98,16 +180,23 @@
                 <div class="title">
                     <h2>ChatGPT</h2>
                 </div>
-                <div
-                    class="tabs text-sm md:text-[18px]">
-                    <button class="active py-5 px-5 md:px-9 border-r" onclick="showChatGptTab('how-it-works')">How it
-                        works?</button>
-                    <button class="py-5 px-5 md:px-9 border-r" onclick="showChatGptTab('history')">History</button>
-                    <button class="py-5  px-5 md:px-9 border-r text-[#CF37B4]"
-                        onclick="showChatGptTab('start-new-chat')">Start new
-                        chat</button>
+                <div class="tabs text-sm md:text-[18px]">
+                    <button class="active  border-r" onclick="showChatGptTab('how-it-works')">
+                        <p class="py-5 px-5 md:px-9"> How it works?</p>
+
+                        <div class="selected-tab"></div>
+                    </button>
+                    <button class=" border-r" onclick="showChatGptTab('history')">
+                        <p class="py-5 px-5 md:px-9">History</p>
+
+                        <div class="selected-tab"></div>
+                    </button>
+                    <button id="custom-underline" class="border-r text-[#CF37B4]" onclick="showChatGptTab('start-new-chat')">
+                        <p class="py-5 px-5 md:px-9">Start new chat</p>
+                        <div class="selected-tab"></div>
+                    </button>
                 </div>
-                <section id="how-it-works" class="tab-content active p-12">
+                <section id="how-it-works" class="tab-content active  p-12">
                     <h3 class="text-lg text-color-basic font-bold mb-4">How it works?</h3>
                     <p class="text-color-basic text-base font-medium mb-8">Lorem ipsum dolor sit amet, consectetur
                         adipiscing
@@ -133,14 +222,14 @@
                             <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
                         </div>
                     </div>
-                    <a href="#"
-                        class="inline-block font-bold text-sm py-4 px-14 bg-gradient-to-r from-[#8530F1] to-[#DA3CAD] text-white rounded-md">START
-                        NEW CHAT</a>
+                    <button href="#"
+                        class="button w-[260px] font-bold text-[15px]">START
+                        NEW CHAT</button>
                 </section>
                 <section id="image-view" class="tab-content  p-6">
                     <button onclick="showChatGptTab('how-it-works')"
                         class="flex-center gap-2 border p-2 pr-4 rounded-xl">
-                        <img src="/assets/arrow.png" alt="back">
+                        <img src="assets/arrow.svg" alt="back">
                         <p>Back</p>
                     </button>
                     <div class="flex justify-center items-center w-full h-full mt-8">
@@ -173,7 +262,9 @@
                     <div class="flex flex-col gap-4 text-color-basic">
                         <div
                             class="p-2 flex justify-between items-center  text-sm gap-2 border rounded-md w-full xl:w-3/4">
-                            <div class="w-24 h-16 bg-[#F9F0F0]  rounded-md mr-2"></div>
+                            <div class="w-24 h-16 bg-[#F9F0F0] flex justify-center items-center rounded-md mr-2">
+                                <img src="assets/AB.svg" alt="">
+                            </div>
                             <div class="flex flex-1 flex-wrap justify-between items-center gap-1">
                                 <p>Uçan hallya binmiş sarl renkli panda</p>
                                 <div class="flex-center gap-2">
@@ -191,12 +282,77 @@
                     </div>
 
                 </section>
-                <section id="start-new-chat" class="tab-content  flex-1 h-full">
-                    <div class="flex flex-col justify-between h-full">
-                        <div >
+                <section id="start-new-chat" class="tab-content  flex-1">
+                    <div id="select-chat-id"
+                        class="select-chat-class  absolute  top-0 left-0 transform  w-screen h-screen flex justify-center items-center bg-[#0e0923bf] z-50 ">
+                        <div class="w-[380px] sm:w-[400px] md:w-[800px] p-6 rounded-lg shadow-lg border bg-white">
+                            <div class="flex justify-start items-center w-full mb-[54px]">
+                                <div class="flex justify-center mb-4">
+                                    <div class="flex justify-start flex-wrap gap-2 w-full">
+                                        <input type="radio" id="chatgpt" name="model" class="hidden peer/chatgpt"
+                                            checked>
+                                        <label for="chatgpt" onclick="showChatGptTab('start-new-chat')"
+                                            class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/chatgpt:bg-[#090B42] peer-checked/chatgpt:text-white flex justify-center items-center gap-2">
+                                            <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
+                                            <p class="font-semibold text-base px-2">ChatGPT</p>
+                                        </label>
+
+
+                                        <input type="radio" id="gpt-4" name="model" class="hidden peer/gpt-4">
+                                        <label for="gpt-4" onclick="showChatGptTab('start-new-chat')"
+                                            class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/gpt-4:bg-[#090B42] peer-checked/gpt-4:text-white flex justify-center items-center gap-2">
+                                            <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
+                                            <p class="font-semibold text-base px-2">GPT-4</p>
+                                        </label>
+
+
+                                        <input type="radio" id="gpt-4o" name="model" class="hidden peer/gpt-4o">
+                                        <label for="gpt-4o" onclick="showChatGptTab('start-new-chat')"
+                                            class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/gpt-4o:bg-[#090B42] peer-checked/gpt-4o:text-white flex justify-center items-center gap-2">
+                                            <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
+                                            <p class="font-semibold text-base px-2">GPT-4o</p>
+                                        </label>
+
+
+                                        <input type="radio" id="google-gemini" name="model"
+                                            class="hidden peer/google-gemini">
+                                        <label for="google-gemini" onclick="showChatGptTab('start-new-chat')"
+                                            class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/google-gemini:bg-[#090B42] peer-checked/google-gemini:text-white flex justify-center items-center gap-2">
+                                            <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
+                                            <p class="font-semibold text-base px-2">Google Gemini</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 class="text-start font-bold text-[22px] text-[#584C55] mb-[30px]">ChatGPT</h2>
+                            <p class="text-start text-[#584C55] font-medium text-base mb-6">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <div class="space-y-2 mb-[83px]">
+                                <a href="#" class="text-[#74205C] font-semibold flex gap-3">
+                                    <img src="assets/text-arrow.svg" alt="">
+                                    <p>Create creative date ideas.</p>
+                                </a>
+                                <a href="#" class="text-[#74205C] font-semibold flex gap-3">
+                                    <img src="assets/text-arrow.svg" alt="">
+                                    <p>How to bake a chocolate cake?</p>
+                                </a>
+                                <a href="#" class="text-[#74205C] font-semibold flex gap-3">
+                                    <img src="assets/text-arrow.svg" alt="">
+                                    <p>Summarize the benefits of meditation.</p>
+                                </a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="h-[56dvh] overflow-y-auto">
                             <div class="chat p-12 space-y-10">
                                 <div class="flex items-center gap-3 space-x-2 mb-4">
-                                    <div class="chat-bubble-other">C</div>
+                                    <div class="chat-bubble-other font-bold flex-wrap">C</div>
                                     <div>
                                         <p class="text-sm text-gray-500">ChatGPT</p>
                                         <p class="text-base font-medium text-color-basic">Hello, I'm here and ready to
@@ -204,7 +360,7 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-3 space-x-2 mb-4">
-                                    <img src="/assets/person.png"  alt="" srcset="">
+                                    <img src="assets/person.svg" alt="" srcset="">
 
                                     <div>
                                         <p class="text-sm text-gray-500">You</p>
@@ -213,14 +369,14 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-3 space-x-2 mb-4">
-                                    <div class="chat-bubble-other">C</div>
+                                    <div class="chat-bubble-other font-bold">C</div>
                                     <div>
                                         <p class="text-sm text-gray-500">ChatGPT</p>
                                         <p class="text-base font-medium text-color-basic">Sorry</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-3 space-x-2 mb-4">
-                                    <img src="/assets/person.png"  alt="" srcset="">
+                                    <img src="assets/person.svg" alt="" srcset="">
                                     <div>
                                         <p class="text-sm text-gray-500">You</p>
                                         <p class="text-base font-medium text-color-basic">can i use that toll for free
@@ -230,19 +386,44 @@
                             </div>
 
                         </div>
-                        <div class="border-t m-4 mt-16 p-2 flex items-center justify-self-end border rounded-2xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        <div class="flex  justify-end mr-4 max-lg:mt-8">
+                            <div
+                                class="text-[#A3929E] border mb-4 font-medium text-[13px] text-right p-3 flex gap-3 rounded-md">
+                                <img src="assets/refresh-button.svg" alt="">
+                                <p>Regenerate Response</p>
+                            </div>
+                        </div>
+                        <div
+                            class="border-t mx-4   p-2 hidden lg:flex items-center justify-self-end border rounded-2xl">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor"
-                                class="size-6 border p-2 box-content rounded-xl text-color-basic font-bold">
+                                class="w-6 h-6 border p-2 box-content rounded-xl text-color-basic font-bold">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
-                            </svg>
+                            </svg> -->
+                            <div class="border p-2 box-content rounded-xl text-color-basic font-bold">
+                                <img src="assets/mic.svg" alt="">
+                            </div>
 
                             <input type="text" class="flex-1  px-4 py-2 focus:outline-none "
                                 placeholder="Send a message">
-                            <button >
-                                <img src="/assets/send-button.png" alt="" srcset="">
+                            <button>
+                                <img src="assets/send-button.svg" alt="" srcset="">
                             </button>
+                        </div>
+                        <div class="lg:hidden absolute bottom-0 left-0 w-full bg-white border-t rounded-2xl px-4 ">
+
+                            <div class="   p-2  flex items-center justify-self-end ">
+                                <div class="border p-2 box-content rounded-xl text-color-basic font-bold">
+                                    <img src="assets/mic.svg" alt="">
+                                </div>
+
+                                <input type="text" class="flex-1  px-4 py-2 focus:outline-none "
+                                    placeholder="Send a message">
+                                <button>
+                                    <img src="assets/send-button.svg" alt="" srcset="">
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -253,7 +434,7 @@
             <!-- account -->
             <section id="account" class="top tab-content  account-section">
                 <h1 class="account-title">Account</h1>
-                <div class="w-4/5 md:w-1/2 lg:w-1/3 mx-auto">
+                <div class="w-4/5 md:w-1/2 lg:w-1/2 mx-auto">
                     <form>
                         <div class="mb-4">
                             <label class="account-label" for="name1">
@@ -324,8 +505,8 @@
                     </form>
 
                     <div class="account-bottom-card">
-                        <h2 >Başlık</h2>
-                        <p >
+                        <h2 class="font-medium">Başlık</h2>
+                        <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo.
@@ -339,17 +520,25 @@
             <!-- onj remover -->
             <div id="obj-remover" class="top tab-content ">
                 <div class="title">
-                    <h2 class="text-2xl tracking-tight text-gray-700">Object Remover</h2>
+                    <h2 class="text-2xl tracking-tight text-[#584C55]">Object Remover</h2>
                 </div>
-                <div
-                    class="tabs text-sm md:text-[18px]">
-                    <button class=" py-5 px-9 border-r or-how-it-works"
-                        onclick="showObjRemover('or-how-it-works')">How it works?</button>
-                    <button class="py-5 px-9 border-r" onclick="showObjRemover('or-history')">History</button>
-                    <button class="py-5 px-9 border-r text-[#CF37B4] flex justify-center items-center gap-2"
-                        onclick="showObjRemover('new-obj-remover')">
-                        <img src="/assets/add-icon.png" alt="" srcset="">
-                        <p>New</p>
+                <div class="tabs text-sm md:text-[18px]">
+                    <button class="border-r or-how-it-works" onclick="showObjRemover('or-how-it-works')">
+                        <p class="py-5 px-5 md:px-9"> How it works?</p>
+
+                        <div class="selected-tab"></div>
+                    </button>
+                    <button class="border-r" onclick="showObjRemover('or-history')">
+                        <p class="py-5 px-5 md:px-9">History</p>
+                        <div class="selected-tab"></div>
+                    </button>
+                    <button class="border-r text-[#CF37B4] " onclick="showObjRemover('new-obj-remover')">
+
+                        <div class="py-5 px-5 md:px-9 flex justify-center items-center gap-2">
+                            <img src="assets/add-icon.svg" alt="" srcset="">
+                            <p>New</p>
+                        </div>
+                        <div class="selected-tab"></div>
                     </button>
                 </div>
                 <section id="or-how-it-works" class="tab-content active p-12">
@@ -363,7 +552,7 @@
                         <div class="w-3/4 md:w-1/4 ">
 
                             <button onclick="showObjRemover('new-obj-remover-image')" class="button flex-center gap-3">
-                                <img src="/assets/up-image-icon.png" class="w-6 h-6" alt="" srcset="">
+                                <img src="assets/up-image-icon.svg" class="w-6 h-6" alt="" srcset="">
                                 <p>SELECT A PICTURE</p>
                             </button>
                         </div>
@@ -378,24 +567,25 @@
                             <!-- Slider and Buttons -->
                             <div class="flex items-center justify-between space-x-4">
                                 <!-- Brush Size Slider -->
-                                <div class="flex items-center gap-2 space-x-2 flex-1 w-full">
+                                <div
+                                    class="flex items-center gap-2 space-x-2 flex-1 w-full border text-gray-700 px-4 py-3 rounded-lg">
                                     <p for="brushSize" class="account-label whitespace-nowrap text-gray-700">Brush Size
                                     </p>
-                                    <input type="range" min="1" max="100" value="50" class="slider">
+                                    <input type="range" min="1" max="100" value="1" class="slider">
                                 </div>
 
                                 <div class="flex justify-center gap-3">
                                     <!-- Before Button -->
                                     <button
-                                        class="flex justify-center items-center  gap-2 px-4 py-2 border text-gray-700 rounded-lg hover:bg-gray-300">
-                                        <img src="/assets/direction-icon.png" class="rotate-180" alt="" srcset="">
+                                        class="flex justify-center items-center  gap-2 px-4 py-3 border text-gray-700 rounded-lg hover:bg-gray-300">
+                                        <img src="assets/direction-icon.svg" class="rotate-180" alt="" srcset="">
                                         <p>Before</p>
                                     </button>
                                     <!-- After Button -->
                                     <button
-                                        class="flex justify-center items-center gap-2 px-4 py-2 border text-gray-700 rounded-lg hover:bg-gray-300">
+                                        class="flex justify-center items-center gap-2 px-4 py-3 border text-gray-700 rounded-lg hover:bg-gray-300">
                                         <p>After</p>
-                                        <img src="/assets/direction-icon.png" alt="" srcset="">
+                                        <img src="assets/direction-icon.svg" alt="" srcset="">
                                     </button>
                                 </div>
                             </div>
@@ -408,9 +598,9 @@
 
                 <h2 class="pricing-title">Pricing</h2>
 
-                <div class=" md:w-3/4 lg:w-2/4 mx-auto mt-16">
-                    <div class="pricing-body flex flex-col md:flex-row">
-                        <div class="card">
+                <div class=" mt-16">
+                    <div class="pricing-body flex flex-col sm:flex-row">
+                        <div class="card w-[350px]  md:w-[370px] lg:w-[400px]">
                             <div class="name-price">
                                 <div>
                                     <h2 class="name">Aylık</h2>
@@ -421,34 +611,34 @@
                             <ul>
 
                                 <li>
-                                    <img src="/assets/check-mark.png" alt="">
+                                    <img src="assets/check-mark.svg" alt="">
                                     <p>Create and use custom GPTs</p>
                                 </li>
                                 <li>
-                                    <img src="/assets/check-mark.png" alt="">
+                                    <img src="assets/check-mark.svg" alt="">
                                     <p>Create and use custom GPTs</p>
                                 </li>
                                 <li>
-                                    <img src="/assets/check-mark.png" alt="">
+                                    <img src="assets/check-mark.svg" alt="">
                                     <p>Create and use custom GPTs</p>
                                 </li>
                                 <li>
-                                    <img src="/assets/check-mark.png" alt="">
+                                    <img src="assets/check-mark.svg" alt="">
                                     <p>Create and use custom GPTs</p>
                                 </li>
                                 <li>
-                                    <img src="/assets/check-mark.png" alt="">
+                                    <img src="assets/check-mark.svg" alt="">
                                     <p>Create and use custom GPTs</p>
                                 </li>
                                 <li>
-                                    <img src="/assets/check-mark.png" alt="">
+                                    <img src="assets/check-mark.svg" alt="">
                                     <p>Create and use custom GPTs</p>
                                 </li>
 
                             </ul>
                         </div>
 
-                        <div class="card">
+                        <div class="card w-[350px]  md:w-[370px] lg:w-[400px]">
                             <div class="name-price">
                                 <div>
                                     <h2 class="name">Yıllık</h2>
@@ -462,27 +652,27 @@
                             <ul>
 
                                 <li>
-                                    <img src="/assets/check-mark.png" alt="">
+                                    <img src="assets/check-mark.svg" alt="">
                                     <p>Create and use custom GPTs</p>
                                 </li>
                                 <li>
-                                    <img src="/assets/check-mark.png" alt="">
+                                    <img src="assets/check-mark.svg" alt="">
                                     <p>Create and use custom GPTs</p>
                                 </li>
                                 <li>
-                                    <img src="/assets/check-mark.png" alt="">
+                                    <img src="assets/check-mark.svg" alt="">
                                     <p>Create and use custom GPTs</p>
                                 </li>
                                 <li>
-                                    <img src="/assets/check-mark.png" alt="">
+                                    <img src="assets/check-mark.svg" alt="">
                                     <p>Create and use custom GPTs</p>
                                 </li>
                                 <li>
-                                    <img src="/assets/check-mark.png" alt="">
+                                    <img src="assets/check-mark.svg" alt="">
                                     <p>Create and use custom GPTs</p>
                                 </li>
                                 <li>
-                                    <img src="/assets/check-mark.png" alt="">
+                                    <img src="assets/check-mark.svg" alt="">
                                     <p>Create and use custom GPTs</p>
                                 </li>
 
@@ -491,9 +681,9 @@
 
 
                     </div>
-                    <div class="account-bottom-card mx-auto">
-                        <h2 >Başlık</h2>
-                        <p >
+                    <div class="account-bottom-card w-[350px] md:w-[790px] lg:w-[850px] mx-auto">
+                        <h2>Başlik</h2>
+                        <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo.
@@ -509,133 +699,8 @@
 
         </main>
     </div>
-
+    <script src="script.js"></script>
 </body>
-<script>
-    function showChatGptTab(tabId) {
 
-        document.querySelectorAll('.top.tab-content').forEach(function (content) {
-            content.classList.remove('active');
-        });
-
-        document.querySelectorAll('#chat-gpt').forEach(function (content) {
-            content.classList.add('active');
-        });
-
-        // Hide all tab contents
-        document.querySelectorAll('#chat-gpt .tab-content').forEach(function (content) {
-            content.classList.remove('active');
-        });
-
-        // Remove active class from all tab buttons
-        document.querySelectorAll('#chat-gpt .tabs button').forEach(function (tab) {
-            tab.classList.remove('active');
-        });
-
-        // Show the selected tab content
-        document.getElementById(tabId).classList.add('active');
-
-        // Add active class to the selected tab button
-        event.target.classList.add('active');
-    }
-
-
-    function showObjRemover(tabId) {
-
-        document.querySelectorAll('.top.tab-content').forEach(function (content) {
-            content.classList.remove('active');
-        });
-
-        document.querySelectorAll('#obj-remover').forEach(function (content) {
-            content.classList.add('active');
-        });
-
-        // Hide all tab contents
-        if (tabId !== "obj-remover") {
-            document.querySelectorAll('#obj-remover .tab-content').forEach(function (content) {
-                content.classList.remove('active');
-            });
-        }
-        if (tabId === "obj-remover") {
-            // document.querySelectorAll('#obj-remover .tab-content').forEach(function (content) {
-            //     content.classList.remove('active');
-            // });
-            document.getElementsByClassName("or-how-it-works").classList.add('active');
-        }
-
-        // Remove active class from all tab buttons
-        document.querySelectorAll('#obj-remover .tabs button').forEach(function (tab) {
-            tab.classList.remove('active');
-        });
-
-
-
-        // Show the selected tab content
-        document.getElementById(tabId).classList.add('active');
-
-        // Add active class to the selected tab button
-        event.target.classList.add('active');
-    }
-
-
-
-
-
-    function showAccount(tabId) {
-
-
-        document.querySelectorAll('.top.tab-content').forEach(function (content) {
-            content.classList.remove('active');
-        });
-
-
-        // Hide all tab contents
-        document.querySelectorAll('#account.tab-content').forEach(function (content) {
-            content.classList.remove('active');
-        });
-
-
-        // Show the selected tab content
-        document.getElementById(tabId).classList.add('active');
-
-    }
-
-
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("openModalBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // Get the close button inside the modal
-    var closeModalBtn = document.getElementsByClassName("close-modal")[0];
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks on close button inside the modal, close the modal
-    closeModalBtn.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-
-</script>
 
 </html>
