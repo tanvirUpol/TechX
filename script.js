@@ -146,15 +146,18 @@
         const sidebar = document.getElementById('sidebar');
         const closeButton = document.getElementById('closeButton');
         const objRemoverLinkClick = document.getElementById('m-obj-remover');
+        const backdrop = document.getElementById('backdrop');
         let isSidebarOpen = false;
 
         function toggleSidebar() {
             if (isSidebarOpen) {
                 sidebar.classList.remove('slide-in-left');
                 sidebar.classList.add('slide-out-left');
+                backdrop.classList.add('hidden');
             } else {
                 sidebar.classList.remove('slide-out-left');
                 sidebar.classList.add('slide-in-left');
+                backdrop.classList.remove('hidden');
             }
             isSidebarOpen = !isSidebarOpen;
         }
