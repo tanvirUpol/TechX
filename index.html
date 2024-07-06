@@ -42,7 +42,7 @@
 
         <!-- Sidebar for small screen -->
         <div id="sidebar"
-            class="fixed block lg:hidden top-0 left-0 z-50 h-full w-full  sm:w-2/4 bg-white shadow-lg transform -translate-x-[800px]">
+            class="fixed block lg:hidden top-0 left-0 z-50 h-full w-full  sm:w-2/4 bg-[#FCF6F6] shadow-lg transform -translate-x-[800px]">
             <div class="p-4 h-full">
                 <div class="flex justify-between items-center">
                     <h2 class="text-xl font-bold">Sidebar </h2>
@@ -265,7 +265,7 @@
                     </button>
                     <div class="flex justify-center items-center w-full h-full mt-8">
                         <div class="p-6 bg-white rounded-lg w-full max-w-3xl">
-                            <div class="w-full h-80 bg-red-100 rounded-lg mb-4"></div>
+                            <div class="w-full h-80 bg-[#FFEDED] rounded-lg mb-4"></div>
                         </div>
                     </div>
 
@@ -380,8 +380,8 @@
                         </div>
                     </div>
                     <div class="flex flex-1 flex-col">
-                        <div class="h-[58dvh] sm:h-[56dvh] overflow-y-auto">
-                            <div class="chat max-sm:p-5 p-12 space-y-10">
+                        <div class="h-full">
+                            <div class="chat max-sm:p-5 p-12 space-y-10 h-[58dvh] sm:h-[63dvh] overflow-y-auto">
                                 <div class="flex items-center gap-3 space-x-2 mb-4">
                                     <div class="chat-bubble-other font-bold flex-wrap">C</div>
                                     <div>
@@ -397,6 +397,20 @@
                                         <p class="text-xs font-bold sm:text-sm text-gray-500">You</p>
                                         <p class="text-xs  sm:text-base font-medium text-color-basic">can i use that toll for free
                                         </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 space-x-2 mb-4">
+                                    <div class="chat-bubble-other font-bold">C</div>
+                                    <div>
+                                        <p class="text-xs font-bold sm:text-sm text-gray-500">ChatGPT</p>
+                                        <p class="text-xs  sm:text-base font-medium text-color-basic">Sorry</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 space-x-2 mb-4">
+                                    <div class="chat-bubble-other font-bold">C</div>
+                                    <div>
+                                        <p class="text-xs font-bold sm:text-sm text-gray-500">ChatGPT</p>
+                                        <p class="text-xs  sm:text-base font-medium text-color-basic">Sorry</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-3 space-x-2 mb-4">
@@ -426,13 +440,7 @@
                             </div>
 
                         </div>
-                        <div class="hidden lg:flex  justify-end mr-7 max-lg:mt-8">
-                            <div
-                                class="text-[#A3929E] border mb-4 font-medium text-[13px] text-right p-3 flex gap-3 rounded-md">
-                                <img src="assets/refresh-button.svg" class="w-6 h-6" alt="">
-                                <p>Regenerate Response</p>
-                            </div>
-                        </div>
+                        
                         <div class="flex absolute bottom-[35px] right-[2px]  lg:hidden bg-white  justify-end mr-2 max-lg:mt-8">
                             <div
                                 class="text-[#A3929E] border mb-4 font-medium text-[13px] text-right p-3 flex gap-3 rounded-md">
@@ -440,8 +448,17 @@
                                 <p>Regenerate Response</p>
                             </div>
                         </div>
-                        <div
-                            class="border-t hidden lg:flex  absolute bottom-[10px] right-0 left-0 max-sm:w-[95%] w-[98%] mx-auto   p-2  items-center justify-self-end border rounded-2xl">
+
+                        <div class="sticky bottom-[5px] right-0 left-0">
+                            <div class="hidden absolute right-0  top-[-60px] lg:flex justify-end mr-7 max-lg:mt-8">
+                                <div
+                                    class="text-[#A3929E] border mb-4 font-medium text-[13px] text-right p-3 flex gap-3 rounded-md">
+                                    <img src="assets/refresh-button.svg" class="w-6 h-6" alt="">
+                                    <p>Regenerate Response</p>
+                                </div>
+                            </div>
+                            <div
+                            class="border-t hidden lg:flex bg-white   max-sm:w-[95%] w-[98%] mx-auto   p-2  items-center justify-self-end border rounded-2xl">
                         
                             <div class="border  p-2 box-content rounded-xl text-color-basic font-bold">
                                 <img src="assets/mic.svg" alt="">
@@ -453,6 +470,8 @@
                                 <img src="assets/send-button.svg" alt="" srcset="">
                             </button>
                         </div>
+                        </div>
+                        
                         <div class="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t rounded-2xl px-4 ">
 
                             <div class="   p-2  flex items-center justify-self-end ">
@@ -604,7 +623,7 @@
                     <div class="flex justify-center items-center w-full h-full">
                         <div class="p-6 bg-white rounded-lg w-full max-w-3xl">
                             <!-- Rectangular Area -->
-                            <div class="w-full h-80 bg-red-100 rounded-lg mb-4"></div>
+                            <div class="w-full h-80 bg-[#FFEDED] rounded-lg mb-4"></div>
 
                             <!-- Slider and Buttons -->
                             <div class="flex flex-col gap-2 md:flex-row items-center justify-between">
