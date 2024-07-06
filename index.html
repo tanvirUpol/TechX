@@ -57,17 +57,26 @@
                         <h2>RECENTLY</h2>
                         <h3>SEE MORE</h3>
                     </div>
-                    <ul class="recently-list">
+                    <ul class="recently-list max-sm:mb-2 max-h-[30vh] max-sm:max-h-[30dvh] overflow-y-auto">
                         <li><a href="#">Text to Image Diffusion Model</a></li>
                         <li><a href=" #">Colorize Old Images</a></li>
                         <li><a href=" #">Face to 3D, emoji, pixel art</a></li>
                         <li><a href=" #">Get HDs from low quality photos</a></li>
                         <li><a href=" #">Generate music</a></li>
+                        <li><a href=" #">Generate music</a></li>
+                        <li><a href=" #">Generate music</a></li>
+                        <li><a href=" #">Generate music</a></li>
+                        <li><a href=" #">Generate music</a></li>
+                        <li><a href=" #">Generate music</a></li>
+                        <li><a href=" #">Generate music</a></li>
+                        <li><a href=" #">Generate music</a></li>
+                        <li><a href=" #">Generate music</a></li>
+                        <li><a href=" #">Generate music</a></li>
                     </ul>
                     <div class="tools">
                         <h2>TOOLS</h2>
                     </div>
-                    <ul class="tools-list">
+                    <ul class="tools-list max-h-[48dvh] max-sm:max-h-[38dvh] overflow-y-auto">
                         <li><a href="#">Text to Image Diffusion Model</a></li>
                         <li class="mb-2 p-2 bg-[#DA3CAD]/10 rounded-md"><a href="#">Fill Masked Parts of Images</a></li>
                         <li><a href="#">Sticker Maker</a></li>
@@ -92,6 +101,20 @@
                         <li><a href="#">Change Clothes</a></li>
                         <li><a href="#">Remove Eye-Glasses</a></li>
                         <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
+                        <li><a href="#">Caption from Image</a></li>
                     </ul>
                 </aside>
             </div>
@@ -107,13 +130,6 @@
             <p>ACCOUNT</p>
             <p class="text-[#74205C] text-xs">▼</p>
         </button>
-        <!-- <div class="block lg:hidden" onclick="showAccount('account')" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-8">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-            </svg>
-        </div> -->
         <div class="dropdown block lg:hidden">
             <div class="block lg:hidden" id="dropdownToggle">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -146,7 +162,7 @@
             <div class="tools">
                 <h2>TOOLS</h2>
             </div>
-            <ul class="tools-list">
+            <ul class="tools-list max-h-[48dvh] overflow-y-auto">
                 <li><a href="#">Text to Image Diffusion Model</a></li>
                 <li class="mb-2 p-2 bg-[#DA3CAD]/10 rounded-md"><a href="#">Fill Masked Parts of Images</a></li>
                 <li><a href="#">Sticker Maker</a></li>
@@ -171,14 +187,28 @@
                 <li><a href="#">Change Clothes</a></li>
                 <li><a href="#">Remove Eye-Glasses</a></li>
                 <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
+                <li><a href="#">Caption from Image</a></li>
             </ul>
         </aside>
-        <main>
+        <main class="relative">
 
             <!-- chat GPT -->
             <div id="chat-gpt" class="top tab-content active">
                 <div class="title">
-                    <h2>ChatGPT</h2>
+                    <h2 class="max-sm:text-base">ChatGPT</h2>
                 </div>
                 <div class="tabs text-sm md:text-[18px]">
                     <button class="active  border-r" onclick="showChatGptTab('how-it-works')">
@@ -196,9 +226,9 @@
                         <div class="selected-tab"></div>
                     </button>
                 </div>
-                <section id="how-it-works" class="tab-content active  p-12">
+                <section id="how-it-works" class="tab-content active max-sm:p-6  p-12">
                     <h3 class="text-lg text-color-basic font-bold mb-4">How it works?</h3>
-                    <p class="text-color-basic text-base font-medium mb-8">Lorem ipsum dolor sit amet, consectetur
+                    <p class="text-color-basic text-base font-medium mb-4">Lorem ipsum dolor sit amet, consectetur
                         adipiscing
                         elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -212,7 +242,7 @@
                             <li class="mb-2">Plan a relaxing day</li>
                         </ul>
                     </div>
-                    <div class="image-examples mb-8">
+                    <div class="image-examples max-sm:mb-4 mb-8">
                         <h4 class="text-lg text-color-basic font-bold mb-4">Examples with images</h4>
                         <div class="flex gap-4 text-color-basic flex-wrap">
                             <div onclick="showChatGptTab('image-view')"
@@ -285,8 +315,8 @@
                 </section>
                 <section id="start-new-chat" class="tab-content  flex-1">
                     <div id="select-chat-id"
-                        class="select-chat-class   absolute  top-0 left-0 transform  w-screen h-screen flex justify-center items-center bg-[#0e0923bf] z-50 ">
-                        <div class="w-[380px] sm:w-[400px] md:w-[800px] p-6 rounded-lg shadow-lg border bg-white">
+                        class="select-chat-class   fixed  top-0 left-0 transform  w-screen h-screen flex justify-center items-center bg-[#0e0923bf] z-50 ">
+                        <div class="w-[350px] sm:w-[400px] md:w-[800px] p-6 rounded-lg shadow-lg border bg-white">
                             <div class="flex justify-start items-center w-full max-sm:mb-8 mb-[54px]">
                                 <div class="flex justify-center mb-4">
                                     <div class="flex justify-start flex-wrap gap-2 w-full">
@@ -349,8 +379,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-col">
-                        <div class="h-[45dvh] sm:h-[56dvh] overflow-y-auto">
+                    <div class="flex flex-1 flex-col">
+                        <div class="h-[58dvh] sm:h-[56dvh] overflow-y-auto">
                             <div class="chat max-sm:p-5 p-12 space-y-10">
                                 <div class="flex items-center gap-3 space-x-2 mb-4">
                                     <div class="chat-bubble-other font-bold flex-wrap">C</div>
@@ -376,6 +406,15 @@
                                         <p class="text-xs  sm:text-base font-medium text-color-basic">Sorry</p>
                                     </div>
                                 </div>
+                                
+                                <div class="flex items-center gap-3 space-x-2 mb-4">
+                                    <div class="chat-bubble-other font-bold">C</div>
+                                    <div>
+                                        <p class="text-xs font-bold sm:text-sm text-gray-500">ChatGPT</p>
+                                        <p class="text-xs  sm:text-base font-medium text-color-basic">Sorry</p>
+                                    </div>
+                                </div>
+                                
                                 <div class="flex items-center gap-3 space-x-2 mb-4">
                                     <img src="assets/person.svg" alt="" srcset="">
                                     <div>
@@ -387,24 +426,24 @@
                             </div>
 
                         </div>
-                        <div class="hidden lg:flex  justify-end mr-4 max-lg:mt-8">
+                        <div class="hidden lg:flex  justify-end mr-7 max-lg:mt-8">
                             <div
                                 class="text-[#A3929E] border mb-4 font-medium text-[13px] text-right p-3 flex gap-3 rounded-md">
-                                <img src="assets/refresh-button.svg" alt="">
+                                <img src="assets/refresh-button.svg" class="w-6 h-6" alt="">
                                 <p>Regenerate Response</p>
                             </div>
                         </div>
-                        <div class="flex absolute bottom-[60px] right-[25px]  lg:hidden bg-white  justify-end mr-4 max-lg:mt-8">
+                        <div class="flex absolute bottom-[35px] right-[2px]  lg:hidden bg-white  justify-end mr-2 max-lg:mt-8">
                             <div
                                 class="text-[#A3929E] border mb-4 font-medium text-[13px] text-right p-3 flex gap-3 rounded-md">
-                                <img src="assets/refresh-button.svg" alt="">
+                                <img src="assets/refresh-button.svg" class="w-6 h-6" alt="">
                                 <p>Regenerate Response</p>
                             </div>
                         </div>
                         <div
-                            class="border-t mx-4   p-2 hidden lg:flex items-center justify-self-end border rounded-2xl">
+                            class="border-t hidden lg:flex  absolute bottom-[10px] right-0 left-0 max-sm:w-[95%] w-[98%] mx-auto   p-2  items-center justify-self-end border rounded-2xl">
                         
-                            <div class="border p-2 box-content rounded-xl text-color-basic font-bold">
+                            <div class="border  p-2 box-content rounded-xl text-color-basic font-bold">
                                 <img src="assets/mic.svg" alt="">
                             </div>
 
@@ -414,7 +453,7 @@
                                 <img src="assets/send-button.svg" alt="" srcset="">
                             </button>
                         </div>
-                        <div class="lg:hidden absolute bottom-0 left-0 w-full bg-white border-t rounded-2xl px-4 ">
+                        <div class="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t rounded-2xl px-4 ">
 
                             <div class="   p-2  flex items-center justify-self-end ">
                                 <div class="border p-2 box-content rounded-xl text-color-basic font-bold">
