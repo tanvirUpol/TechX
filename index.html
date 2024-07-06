@@ -30,11 +30,13 @@
         </div>
     </div>
     <header class="header-area max-sm:py-5">
-        <div class="w-10 h-1 hidden lg:block"></div>
+        <div class="w-32 hidden xl:block" >
+            <img src="assets/logo.jpg" alt="">
+        </div>
 
         <!-- Hamburger Menu -->
         <svg id="hamburgerMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="size-6 lg:hidden cursor-pointer">
+            stroke="currentColor" class="size-6 xl:hidden cursor-pointer">
             <path stroke-linecap="round" stroke-linejoin="round"
                 d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
         </svg>
@@ -42,9 +44,9 @@
 
         <!-- Sidebar for small screen -->
         <div id="sidebar"
-            class="fixed block lg:hidden top-0 left-0 z-50 h-full w-full  sm:w-2/4 bg-[#FCF6F6] shadow-lg transform -translate-x-[800px]">
+            class="fixed block xl:hidden top-0 left-0 z-50 h-full w-auto bg-[#FCF6F6] shadow-lg transform -translate-x-[800px]">
             <div class="p-4 h-full">
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center w-full pl-4">
                     <h2 class="text-xl font-bold">Sidebar </h2>
                     <!-- Close Button -->
                     <svg id="closeButton" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -52,7 +54,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </div>
-                <aside class="block lg:hidden h-full">
+                <aside class="block xl:hidden h-full">
                     <div class="recently">
                         <h2>RECENTLY</h2>
                         <h3>SEE MORE</h3>
@@ -62,15 +64,6 @@
                         <li><a href=" #">Colorize Old Images</a></li>
                         <li><a href=" #">Face to 3D, emoji, pixel art</a></li>
                         <li><a href=" #">Get HDs from low quality photos</a></li>
-                        <li><a href=" #">Generate music</a></li>
-                        <li><a href=" #">Generate music</a></li>
-                        <li><a href=" #">Generate music</a></li>
-                        <li><a href=" #">Generate music</a></li>
-                        <li><a href=" #">Generate music</a></li>
-                        <li><a href=" #">Generate music</a></li>
-                        <li><a href=" #">Generate music</a></li>
-                        <li><a href=" #">Generate music</a></li>
-                        <li><a href=" #">Generate music</a></li>
                         <li><a href=" #">Generate music</a></li>
                     </ul>
                     <div class="tools">
@@ -101,37 +94,23 @@
                         <li><a href="#">Change Clothes</a></li>
                         <li><a href="#">Remove Eye-Glasses</a></li>
                         <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
-                        <li><a href="#">Caption from Image</a></li>
                     </ul>
                 </aside>
             </div>
         </div>
 
-        <nav class="flex-center gap-8 hidden lg:flex max-sm:text-xs">
+        <nav class="flex-center gap-8 hidden xl:flex max-sm:text-xs">
             <a href="#">TOOLS</a>
             <a id="openModalBtn" href="#">HELP</a>
             <a href="#">CONTACT</a>
             <a onclick="showAccount('pricing')" href="#">PRICING</a>
         </nav>
-        <button onclick="showAccount('account')" class="hidden lg:flex justify-center items-center gap-2">
+        <button onclick="showAccount('account')" class="hidden xl:flex justify-center items-center gap-2">
             <p>ACCOUNT</p>
             <p class="text-[#74205C] text-xs">▼</p>
         </button>
-        <div class="dropdown block lg:hidden">
-            <div class="block lg:hidden" id="dropdownToggle">
+        <div class="dropdown block xl:hidden">
+            <div class="block xl:hidden" id="dropdownToggle">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-8">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -147,7 +126,7 @@
         </div>
     </header>
     <div class="flex flex-1">
-        <aside class="hidden lg:block">
+        <aside class="hidden xl:block">
             <div class="recently">
                 <h2>RECENTLY</h2>
                 <h3>SEE MORE</h3>
@@ -186,20 +165,6 @@
                 <li><a href="#">Face to sticker</a></li>
                 <li><a href="#">Change Clothes</a></li>
                 <li><a href="#">Remove Eye-Glasses</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
-                <li><a href="#">Caption from Image</a></li>
                 <li><a href="#">Caption from Image</a></li>
             </ul>
         </aside>
@@ -420,7 +385,7 @@
 
                         </div>
                         
-                        <div class="flex absolute bottom-[35px] right-[2px]  lg:hidden bg-white  justify-end mr-2 max-lg:mt-8">
+                        <div class="flex absolute bottom-[35px] right-[2px]  xl:hidden bg-white  justify-end mr-2 max-xl:mt-8">
                             <div
                                 class="text-[#A3929E] border mb-4 font-medium text-[13px] text-right p-3 flex gap-3 rounded-md">
                                 <img src="assets/refresh-button.svg" class="w-6 h-6" alt="">
@@ -429,7 +394,7 @@
                         </div>
 
                         <div class="sticky bottom-[5px] right-0 left-0">
-                            <div class="hidden absolute right-0  top-[-60px] lg:flex justify-end mr-7 max-lg:mt-8">
+                            <div class="hidden absolute right-0  top-[-60px] xl:flex justify-end mr-7 max-xl:mt-8">
                                 <div
                                     class="text-[#A3929E] border mb-4 font-medium text-[13px] text-right p-3 flex gap-3 rounded-md">
                                     <img src="assets/refresh-button.svg" class="w-6 h-6" alt="">
@@ -437,7 +402,7 @@
                                 </div>
                             </div>
                             <div
-                            class="border-t hidden lg:flex bg-white   max-sm:w-[95%] w-[98%] mx-auto   p-2  items-center justify-self-end border rounded-2xl">
+                            class="border-t hidden xl:flex bg-white   max-sm:w-[95%] w-[98%] mx-auto   p-2  items-center justify-self-end border rounded-2xl">
                         
                             <div class="border  p-2 box-content rounded-xl text-color-basic font-bold">
                                 <img src="assets/mic.svg" alt="">
@@ -451,7 +416,7 @@
                         </div>
                         </div>
                         
-                        <div class="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t rounded-2xl px-4 ">
+                        <div class="xl:hidden fixed bottom-0 left-0 w-full bg-white border-t rounded-2xl px-4 ">
 
                             <div class="   p-2  flex items-center justify-self-end ">
                                 <div class="border p-2 box-content rounded-xl text-color-basic font-bold">
