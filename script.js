@@ -1,5 +1,27 @@
 
-    function showChatGptTab(tabId) {
+    function showChatGptTab(tabId,random = "") {
+
+
+        const chatbox = document.getElementById("chat-box");
+
+        if(random === "chat-box"){
+            const chatbox = document.getElementById(random);
+            chatbox.classList.remove("hidden")
+            chatbox.classList.add("flex")
+            const chatType = document.getElementById("select-chat-type");
+            chatType.classList.remove("block")
+            chatType.classList.add("hidden")
+
+        }
+
+        if(chatbox && random != "chat-box"){
+            const chatType = document.getElementById("select-chat-type");
+            chatType.classList.add("block")
+            chatType.classList.remove("hidden")
+            chatbox.classList.remove("flex")
+            chatbox.classList.add("hidden")
+        }
+
 
         document.querySelectorAll('.top.tab-content').forEach(function (content) {
             content.classList.remove('active');
@@ -138,7 +160,6 @@
         }
     }
 
-    // modal end
 
     // sidebar
     document.addEventListener('DOMContentLoaded', function () {

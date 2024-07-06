@@ -21,7 +21,8 @@
         <div class="modal-content">
             <p class="close">&times;</p>
             <h2>How it works?</h2>
-            <p class="description mb-[51px] text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            <p class="description mb-[51px] text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod
                 tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -30,7 +31,7 @@
         </div>
     </div>
     <header class="header-area max-sm:py-5">
-        <div class="w-32 hidden xl:block" >
+        <div class="w-32 hidden xl:block">
             <img src="assets/logo.PNG" alt="">
         </div>
 
@@ -45,10 +46,10 @@
         <!-- Sidebar for small screen -->
         <div id="sidebar"
             class="fixed block xl:hidden top-0 left-0 z-[52] h-full w-auto bg-[#FCF6F6] shadow-lg transform -translate-x-[800px]">
-   
+
             <div class="p-4 h-full">
                 <div class="flex justify-between items-center w-full pl-4">
-                    <div class="w-32 py-2" >
+                    <div class="w-32 py-2">
                         <img src="assets/logo.PNG" alt="">
                     </div>
                     <!-- Close Button -->
@@ -74,7 +75,9 @@
                     </div>
                     <ul class="tools-list h-[48%] overflow-y-auto">
                         <li><a href="#">Text to Image Diffusion Model</a></li>
-                        <li class="mb-2 p-2 rounded-md" style="background: linear-gradient(to right, rgba(133, 48, 241, 0.12), rgba(218, 60, 173, 0.12))"><a href="#">Fill Masked Parts of Images</a></li>
+                        <li class="mb-2 p-2 rounded-md"
+                            style="background: linear-gradient(to right, rgba(133, 48, 241, 0.12), rgba(218, 60, 173, 0.12))">
+                            <a href="#">Fill Masked Parts of Images</a></li>
                         <li><a href="#">Sticker Maker</a></li>
                         <li class=" flex justify-between items-center">
                             <a href="#">Face Restoration</a>
@@ -148,7 +151,9 @@
             </div>
             <ul class="tools-list max-h-[50dvh] overflow-y-auto">
                 <li><a href="#">Text to Image Diffusion Model</a></li>
-                <li class="mb-2 p-2 rounded-md" style="background: linear-gradient(to right, rgba(133, 48, 241, 0.12), rgba(218, 60, 173, 0.12));"><a href="#">Fill Masked Parts of Images</a></li>
+                <li class="mb-2 p-2 rounded-md"
+                    style="background: linear-gradient(to right, rgba(133, 48, 241, 0.12), rgba(218, 60, 173, 0.12));">
+                    <a href="#">Fill Masked Parts of Images</a></li>
                 <li><a href="#">Sticker Maker</a></li>
                 <li class=" flex justify-between items-center">
                     <a href="#">Face Restoration</a>
@@ -191,7 +196,8 @@
 
                         <div class="selected-tab"></div>
                     </button>
-                    <button id="custom-underline" class="border-r border-[#e6e6e6] text-[#CF37B4]" onclick="showChatGptTab('start-new-chat')">
+                    <button id="custom-underline" class="border-r border-[#e6e6e6] text-[#CF37B4]"
+                        onclick="showChatGptTab('start-new-chat')">
                         <p class="py-5 max-sm:px-3 px-5 md:px-9">Start new chat</p>
                         <div class="selected-tab"></div>
                     </button>
@@ -222,8 +228,7 @@
                             <div class="w-24 h-24 bg-[#F9F0F0]  rounded"></div>
                         </div>
                     </div>
-                    <button href="#"
-                        class="button w-[230px] font-bold text-[15px]">START
+                    <button href="#" class="button w-[230px] font-bold text-[15px]">START
                         NEW CHAT
                     </button>
                 </section>
@@ -263,7 +268,8 @@
                     <div class="flex flex-col gap-4 text-color-basic">
                         <div
                             class="p-2 flex justify-between items-center  text-sm gap-2 border rounded-md w-full xl:w-3/4">
-                            <div class="w-16 sm:w-24 h-12 sm:h-16  bg-[#F9F0F0] flex justify-center items-center rounded-md mr-2">
+                            <div
+                                class="w-16 sm:w-24 h-12 sm:h-16  bg-[#F9F0F0] flex justify-center items-center rounded-md mr-2">
                                 <img src="assets/AB.svg" alt="">
                             </div>
                             <div class="flex flex-1 flex-wrap justify-between items-center gap-1">
@@ -284,72 +290,10 @@
 
                 </section>
                 <section id="start-new-chat" class="tab-content  flex-1">
-                    <div id="select-chat-id"
-                        class="select-chat-class   fixed  top-0 left-0 transform  w-screen h-screen flex justify-center items-center bg-[#0e0923bf] z-50 ">
-                        <div class="w-[350px] sm:w-[400px] md:w-[800px] p-6 rounded-lg shadow-lg border bg-white">
-                            <div class="flex justify-start items-center w-full max-sm:mb-8 mb-[54px]">
-                                <div class="flex justify-center mb-4">
-                                    <div class="flex justify-start flex-wrap gap-2 w-full">
-                                        <input type="radio" id="chatgpt" name="model" class="hidden peer/chatgpt"
-                                            checked>
-                                        <label for="chatgpt" onclick="showChatGptTab('start-new-chat')"
-                                            class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/chatgpt:bg-[#090B42] peer-checked/chatgpt:text-white flex justify-center items-center gap-2">
-                                            <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
-                                            <p class="font-semibold max-sm:text-xs text-base px-2">ChatGPT</p>
-                                        </label>
 
 
-                                        <input type="radio" id="gpt-4" name="model" class="hidden peer/gpt-4">
-                                        <label for="gpt-4" onclick="showChatGptTab('start-new-chat')"
-                                            class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/gpt-4:bg-[#090B42] peer-checked/gpt-4:text-white flex justify-center items-center gap-2">
-                                            <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
-                                            <p class="font-semibold max-sm:text-xs text-base px-2">GPT-4</p>
-                                        </label>
 
-
-                                        <input type="radio" id="gpt-4o" name="model" class="hidden peer/gpt-4o">
-                                        <label for="gpt-4o" onclick="showChatGptTab('start-new-chat')"
-                                            class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/gpt-4o:bg-[#090B42] peer-checked/gpt-4o:text-white flex justify-center items-center gap-2">
-                                            <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
-                                            <p class="font-semibold max-sm:text-xs text-base px-2">GPT-4o</p>
-                                        </label>
-
-
-                                        <input type="radio" id="google-gemini" name="model"
-                                            class="hidden peer/google-gemini">
-                                        <label for="google-gemini" onclick="showChatGptTab('start-new-chat')"
-                                            class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/google-gemini:bg-[#090B42] peer-checked/google-gemini:text-white flex justify-center items-center gap-2">
-                                            <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
-                                            <p class="font-semibold max-sm:text-xs text-base px-2">Google Gemini</p>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <h2 class="text-start font-bold text-[22px] text-[#584C55] max-sm:mb-4 mb-[30px]">ChatGPT</h2>
-                            <p class="text-start text-[#584C55] font-medium text-base mb-6">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                            <div class="space-y-2 mb-[83px]">
-                                <a href="#" class="text-[#74205C] font-semibold flex gap-3">
-                                    <img src="assets/text-arrow.svg" alt="">
-                                    <p>Create creative date ideas.</p>
-                                </a>
-                                <a href="#" class="text-[#74205C] font-semibold flex gap-3">
-                                    <img src="assets/text-arrow.svg" alt="">
-                                    <p>How to bake a chocolate cake?</p>
-                                </a>
-                                <a href="#" class="text-[#74205C] font-semibold flex gap-3">
-                                    <img src="assets/text-arrow.svg" alt="">
-                                    <p>Summarize the benefits of meditation.</p>
-                                </a>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-1 flex-col">
+                    <div id="chat-box" class=" hidden flex-1 flex-col">
                         <div class="h-full">
                             <div class="chat max-sm:p-5 p-12 space-y-10 h-[58dvh] sm:h-[63dvh] overflow-y-auto">
                                 <div class="flex items-center gap-3 space-x-2 mb-4">
@@ -434,6 +378,68 @@
                                     <img src="assets/send-button.svg" alt="" srcset="">
                                 </button>
                             </div>
+                        </div>
+                    </div>
+
+                    <div id="select-chat-type" class=" p-6 rounded-lg mx-auto bg-white mt-10">
+                        <div class="flex justify-start items-center w-full max-sm:mb-8 mb-[54px]">
+                            <div class="flex justify-center mb-4">
+                                <div class="flex justify-start flex-wrap gap-4 w-full">
+                                    <input type="radio" id="chatgpt" name="model" class="hidden peer/chatgpt" checked>
+                                    <label for="chatgpt" onclick="showChatGptTab('start-new-chat','chat-box')"
+                                        class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/chatgpt:bg-[#090B42] peer-checked/chatgpt:text-white flex justify-center items-center gap-2">
+                                        <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
+                                        <p class="font-semibold max-sm:text-xs text-base px-2">ChatGPT</p>
+                                    </label>
+
+
+                                    <input type="radio" id="gpt-4" name="model" class="hidden peer/gpt-4">
+                                    <label for="gpt-4" onclick="showChatGptTab('start-new-chat','chat-box')"
+                                        class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/gpt-4:bg-[#090B42] peer-checked/gpt-4:text-white flex justify-center items-center gap-2">
+                                        <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
+                                        <p class="font-semibold max-sm:text-xs text-base px-2">GPT-4</p>
+                                    </label>
+
+
+                                    <input type="radio" id="gpt-4o" name="model" class="hidden peer/gpt-4o">
+                                    <label for="gpt-4o" onclick="showChatGptTab('start-new-chat','chat-box')"
+                                        class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/gpt-4o:bg-[#090B42] peer-checked/gpt-4o:text-white flex justify-center items-center gap-2">
+                                        <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
+                                        <p class="font-semibold max-sm:text-xs text-base px-2">GPT-4o</p>
+                                    </label>
+
+
+                                    <input type="radio" id="google-gemini" name="model"
+                                        class="hidden peer/google-gemini">
+                                    <label for="google-gemini" onclick="showChatGptTab('start-new-chat','chat-box')"
+                                        class="px-2 text-[#584C55] py-2 rounded-full cursor-pointer border peer-checked/google-gemini:bg-[#090B42] peer-checked/google-gemini:text-white flex justify-center items-center gap-2">
+                                        <div class="w-[36px] h-[36px] bg-white rounded-full border"></div>
+                                        <p class="font-semibold max-sm:text-xs text-base px-2">Google Gemini</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="text-start font-bold text-[22px] text-[#584C55] max-sm:mb-4 mb-[30px]">ChatGPT</h2>
+                        <p class="text-start text-[#584C55] font-medium text-base mb-6">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="space-y-2 mb-[83px]">
+                            <a href="#" class="text-[#74205C] font-semibold flex gap-3">
+                                <img src="assets/text-arrow.svg" alt="">
+                                <p>Create creative date ideas.</p>
+                            </a>
+                            <a href="#" class="text-[#74205C] font-semibold flex gap-3">
+                                <img src="assets/text-arrow.svg" alt="">
+                                <p>How to bake a chocolate cake?</p>
+                            </a>
+                            <a href="#" class="text-[#74205C] font-semibold flex gap-3">
+                                <img src="assets/text-arrow.svg" alt="">
+                                <p>Summarize the benefits of meditation.</p>
+                            </a>
+
+
                         </div>
                     </div>
 
@@ -533,7 +539,8 @@
                     <h2 class="text-2xl tracking-tight text-[#584C55]">Object Remover</h2>
                 </div>
                 <div class="tabs text-sm md:text-[18px]">
-                    <button class="border-r border-[#e6e6e6] or-how-it-works" onclick="showObjRemover('or-how-it-works')">
+                    <button class="border-r border-[#e6e6e6] or-how-it-works"
+                        onclick="showObjRemover('or-how-it-works')">
                         <p class="py-5 px-5 md:px-9"> How it works?</p>
 
                         <div class="selected-tab"></div>
@@ -542,7 +549,8 @@
                         <p class="py-5 px-5 md:px-9">History</p>
                         <div class="selected-tab"></div>
                     </button>
-                    <button class="border-r border-[#e6e6e6] text-[#CF37B4] " onclick="showObjRemover('new-obj-remover')">
+                    <button class="border-r border-[#e6e6e6] text-[#CF37B4] "
+                        onclick="showObjRemover('new-obj-remover')">
 
                         <div class="py-5 px-5 md:px-9 flex justify-center items-center gap-2">
                             <img src="assets/add-icon.svg" alt="" srcset="">
